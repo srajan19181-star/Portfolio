@@ -40,16 +40,6 @@ const allItems = [
   },
   ...timelineItems,
   {
-    type: 'experience',
-    title: 'AI Web Developer',
-    org: 'InAmigos Foundation',
-    duration: '2025 – Present',
-    description:
-      'Working as an AI Web Developer at InAmigos Foundation — building AI-integrated web features and full-stack MERN modules for real-world social-impact products.',
-    color: '#69f0ae',
-    icon: '🤖',
-  },
-  {
     type: 'milestone',
     title: 'HackXios 2025 — Participant',
     org: 'InAmigos Foundation',
