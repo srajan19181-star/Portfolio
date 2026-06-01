@@ -130,7 +130,9 @@ const Navbar = () => {
                 {item.label}
                 {isActive && (
                   <motion.div
-                    layoutId="navIndicator"
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
                     style={{
                       position: 'absolute',
                       bottom: -2,
@@ -139,6 +141,7 @@ const Navbar = () => {
                       height: 1,
                       background: 'linear-gradient(90deg, transparent, #00c853, transparent)',
                       boxShadow: '0 0 6px #00c853',
+                      transformOrigin: 'center',
                     }}
                   />
                 )}

@@ -43,7 +43,7 @@ const Hero = () => {
         justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
-        padding: '0 24px',
+        padding: '140px 24px 60px',
       }}
     >
       {/* Background radial glow */}
@@ -79,186 +79,243 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div style={{ textAlign: 'center', maxWidth: 900, position: 'relative', zIndex: 2 }}>
-
-
-        {/* System tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-mono"
-          style={{
-            color: '#00c853',
-            fontSize: '0.7rem',
-            letterSpacing: '0.4em',
-            marginBottom: 24,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 12,
-          }}
-        >
-          <span
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full relative z-10 gap-12 md:gap-20" style={{ maxWidth: 1100 }}>
+        
+        {/* Left Side: Text */}
+        <div style={{ flex: 1, textAlign: 'left' }} className="flex flex-col items-center md:items-start text-center md:text-left">
+          {/* System tag */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-mono"
             style={{
-              display: 'inline-block',
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
-              background: '#00c853',
-              boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
-              animation: 'pulse-neon 2s infinite',
+              color: '#00c853',
+              fontSize: '0.7rem',
+              letterSpacing: '0.4em',
+              marginBottom: 24,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 12,
             }}
-          />
-          SYSTEM ONLINE — PORTFOLIO v2.0
-          <span
-            style={{
-              display: 'inline-block',
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
-              background: '#00c853',
-              boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
-              animation: 'pulse-neon 2s infinite',
-            }}
-          />
-        </motion.div>
-
-        {/* Name — cinematic entrance */}
-        <motion.h1
-          ref={nameRef}
-          initial={{ opacity: 0, y: 40, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display glow-cyan"
-          style={{
-            fontSize: 'clamp(2.5rem, 8vw, 6rem)',
-            fontWeight: 900,
-            color: '#ffffff',
-            letterSpacing: '0.05em',
-            lineHeight: 1.05,
-            marginBottom: 12,
-            textShadow:
-              '0 0 40px rgba(0,200,83,0.45), 0 0 80px rgba(105,240,174,0.2)',
-          }}
-        >
-          {personalInfo.name.split(' ').map((word, i) => (
+          >
             <span
-              key={i}
-              style={{ display: 'block', color: i === 0 ? '#ffffff' : '#00c853' }}
-            >
-              {word}
-            </span>
-          ))}
-        </motion.h1>
-
-        {/* Animated role title */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          style={{ marginBottom: 32 }}
-        >
-          <TypeAnimation
-            sequence={personalInfo.taglines.flatMap((t) => [t, 2000])}
-            wrapper="div"
-            speed={50}
-            repeat={Infinity}
-            style={{
-              fontFamily: "'Rajdhani', sans-serif",
-              fontSize: 'clamp(1.1rem, 3vw, 1.6rem)',
-              color: '#94a3b8',
-              letterSpacing: '0.1em',
-              fontWeight: 500,
-            }}
-          />
-        </motion.div>
-
-        {/* Bio */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1 }}
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-            color: '#64748b',
-            maxWidth: 640,
-            margin: '0 auto 48px',
-            lineHeight: 1.7,
-          }}
-        >
-          {personalInfo.bio}
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}
-        >
-          <a
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="neon-btn interactive"
-          >
-            Explore My Work
-          </a>
-          <a
-            href={personalInfo.resume}
-            download
-            className="neon-btn neon-btn-purple interactive"
-          >
-            Download CV
-          </a>
-        </motion.div>
-
-        {/* Social links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          style={{
-            marginTop: 48,
-            display: 'flex',
-            gap: 24,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          {[
-            { label: 'GitHub', url: personalInfo.github, icon: '⌥' },
-            { label: 'LinkedIn', url: personalInfo.linkedin, icon: '◈' },
-            { label: 'Email', url: `mailto:${personalInfo.email}`, icon: '◉' },
-          ].map((social) => (
-            <a
-              key={social.label}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="interactive"
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-                color: '#4a7c59',
-                textDecoration: 'none',
-                fontFamily: "'Share Tech Mono', monospace",
-                fontSize: '0.75rem',
-                letterSpacing: '0.1em',
-                transition: 'all 0.3s ease',
+                display: 'inline-block',
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: '#00c853',
+                boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
+                animation: 'pulse-neon 2s infinite',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#00c853')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#4a7c59')}
+            />
+            SYSTEM ONLINE — PORTFOLIO v2.0
+            <span
+              style={{
+                display: 'inline-block',
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: '#00c853',
+                boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
+                animation: 'pulse-neon 2s infinite',
+              }}
+            />
+          </motion.div>
+
+          {/* Name — cinematic entrance */}
+          <motion.h1
+            ref={nameRef}
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display glow-cyan"
+            style={{
+              fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
+              fontWeight: 900,
+              color: '#ffffff',
+              letterSpacing: '0.05em',
+              lineHeight: 1.05,
+              marginBottom: 12,
+              textShadow:
+                '0 0 40px rgba(0,200,83,0.45), 0 0 80px rgba(105,240,174,0.2)',
+            }}
+          >
+            {personalInfo.name.split(' ').map((word, i) => (
+              <span
+                key={i}
+                style={{ display: 'block', color: i === 0 ? '#ffffff' : '#00c853' }}
+              >
+                {word}
+              </span>
+            ))}
+          </motion.h1>
+
+          {/* Animated role title */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            style={{ marginBottom: 32 }}
+          >
+            <TypeAnimation
+              sequence={personalInfo.taglines.flatMap((t) => [t, 2000])}
+              wrapper="div"
+              speed={50}
+              repeat={Infinity}
+              style={{
+                fontFamily: "'Rajdhani', sans-serif",
+                fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
+                color: '#94a3b8',
+                letterSpacing: '0.1em',
+                fontWeight: 500,
+              }}
+            />
+          </motion.div>
+
+          {/* Bio */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1 }}
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+              color: '#64748b',
+              maxWidth: 580,
+              marginBottom: 48,
+              lineHeight: 1.7,
+            }}
+          >
+            {personalInfo.bio}
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}
+            className="justify-center md:justify-start"
+          >
+            <a
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="neon-btn interactive"
             >
-              <span style={{ fontSize: '1rem' }}>{social.icon}</span>
-              {social.label}
+              Explore My Work
             </a>
-          ))}
+            <a
+              href={personalInfo.resume}
+              download
+              className="neon-btn neon-btn-purple interactive"
+            >
+              Download CV
+            </a>
+          </motion.div>
+
+          {/* Social links */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            style={{
+              marginTop: 48,
+              display: 'flex',
+              gap: 24,
+            }}
+            className="justify-center md:justify-start"
+          >
+            {[
+              { label: 'GitHub', url: personalInfo.github, icon: '⌥' },
+              { label: 'LinkedIn', url: personalInfo.linkedin, icon: '◈' },
+              { label: 'Email', url: `mailto:${personalInfo.email}`, icon: '◉' },
+            ].map((social) => (
+              <a
+                key={social.label}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="interactive"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  color: '#4a7c59',
+                  textDecoration: 'none',
+                  fontFamily: "'Share Tech Mono', monospace",
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.1em',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#00c853')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#4a7c59')}
+              >
+                <span style={{ fontSize: '1rem' }}>{social.icon}</span>
+                {social.label}
+              </a>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Right Side: Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}
+        >
+          <div style={{ position: 'relative' }}>
+            {/* Outer glow ring */}
+            <div style={{
+              width: 'clamp(200px, 25vw, 320px)',
+              height: 'clamp(200px, 25vw, 320px)',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #00c853, #69f0ae, rgba(255,255,255,0.15), #00c853)',
+              padding: 4,
+              boxShadow: '0 0 50px rgba(0,200,83,0.35), 0 0 100px rgba(105,240,174,0.12)',
+              animation: 'pulse-neon 3s ease-in-out infinite',
+            }}>
+              <img
+                src={personalInfo.photo}
+                alt={personalInfo.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  objectPosition: 'top center',
+                  display: 'block',
+                }}
+              />
+            </div>
+            {/* Status badge */}
+            <div style={{
+              position: 'absolute',
+              bottom: 16,
+              right: 0,
+              background: 'rgba(5,10,14,0.92)',
+              border: '1.5px solid #00c853',
+              borderRadius: 20,
+              padding: '6px 16px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              backdropFilter: 'blur(10px)',
+            }}>
+              <motion.span
+                animate={{ scale: [1, 1.4, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                style={{ width: 8, height: 8, borderRadius: '50%', background: '#00c853', boxShadow: '0 0 10px #00c853', display: 'inline-block' }}
+              />
+              <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.7rem', color: '#00c853', letterSpacing: '0.1em' }}>OPEN TO WORK</span>
+            </div>
+          </div>
         </motion.div>
       </div>
 

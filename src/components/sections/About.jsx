@@ -128,87 +128,29 @@ const About = () => {
               </div>
             </div>
 
-            {/* Bio text & Profile Photo */}
-            <div className="glass-card flex flex-col md:flex-row gap-8 items-center" style={{ padding: 32 }}>
-              <div style={{ flex: 1 }}>
-                <p
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    color: '#94a3b8',
-                    lineHeight: 1.8,
-                    fontSize: '0.95rem',
-                    marginBottom: 20,
-                  }}
-                >
-                  {personalInfo.bio}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    color: '#64748b',
-                    lineHeight: 1.8,
-                    fontSize: '0.9rem',
-                  }}
-                >
-                  I believe in building things that work well, scale efficiently, and are maintainable. Every project I take on teaches me something new about software architecture and clean code principles.
-                </p>
-              </div>
-
-              {/* Profile Photo */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.7, delay: 0.25 }}
-                style={{ flexShrink: 0 }}
+            {/* Bio text */}
+            <div className="glass-card" style={{ padding: 32 }}>
+              <p
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  color: '#94a3b8',
+                  lineHeight: 1.8,
+                  fontSize: '0.95rem',
+                  marginBottom: 20,
+                }}
               >
-                <div style={{ position: 'relative' }}>
-                  {/* Outer glow ring */}
-                  <div style={{
-                    width: 'clamp(140px, 15vw, 180px)',
-                    height: 'clamp(140px, 15vw, 180px)',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #00c853, #69f0ae, rgba(255,255,255,0.15), #00c853)',
-                    padding: 3,
-                    boxShadow: '0 0 40px rgba(0,200,83,0.35), 0 0 80px rgba(105,240,174,0.12)',
-                    animation: 'pulse-neon 3s ease-in-out infinite',
-                  }}>
-                    <img
-                      src={personalInfo.photo}
-                      alt={personalInfo.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        objectPosition: 'top center',
-                        display: 'block',
-                      }}
-                    />
-                  </div>
-                  {/* Status badge */}
-                  <div style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    right: -10,
-                    background: 'rgba(5,10,14,0.92)',
-                    border: '1.5px solid #00c853',
-                    borderRadius: 20,
-                    padding: '4px 12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 6,
-                    backdropFilter: 'blur(10px)',
-                    transform: 'scale(0.85)'
-                  }}>
-                    <motion.span
-                      animate={{ scale: [1, 1.4, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                      style={{ width: 7, height: 7, borderRadius: '50%', background: '#00c853', boxShadow: '0 0 8px #00c853', display: 'inline-block' }}
-                    />
-                    <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.6rem', color: '#00c853', letterSpacing: '0.1em' }}>OPEN TO WORK</span>
-                  </div>
-                </div>
-              </motion.div>
+                {personalInfo.bio}
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  color: '#64748b',
+                  lineHeight: 1.8,
+                  fontSize: '0.9rem',
+                }}
+              >
+                I believe in building things that work well, scale efficiently, and are maintainable. Every project I take on teaches me something new about software architecture and clean code principles.
+              </p>
             </div>
           </motion.div>
 
