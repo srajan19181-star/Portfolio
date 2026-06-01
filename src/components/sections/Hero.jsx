@@ -55,7 +55,7 @@ const Hero = () => {
           height: 700,
           borderRadius: '50%',
           background:
-            'radial-gradient(circle, rgba(168, 85, 247,0.07) 0%, rgba(31, 41, 55, 0.05) 40%, transparent 70%)',
+            'radial-gradient(circle, rgba(59, 130, 246,0.07) 0%, rgba(31, 41, 55, 0.05) 40%, transparent 70%)',
           filter: 'blur(60px)',
           top: '50%',
           left: '50%',
@@ -66,10 +66,10 @@ const Hero = () => {
 
       {/* Animated corner brackets */}
       <div style={{ position: 'absolute', top: 80, left: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #a855f7', borderLeft: '2px solid #a855f7' }} />
+        <div style={{ width: 30, height: 30, borderTop: '2px solid #3b82f6', borderLeft: '2px solid #3b82f6' }} />
       </div>
       <div style={{ position: 'absolute', top: 80, right: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #a855f7', borderRight: '2px solid #a855f7' }} />
+        <div style={{ width: 30, height: 30, borderTop: '2px solid #3b82f6', borderRight: '2px solid #3b82f6' }} />
       </div>
       <div style={{ position: 'absolute', bottom: 80, left: 40, opacity: 0.3 }}>
         <div style={{ width: 30, height: 30, borderBottom: '2px solid #00d4ff', borderLeft: '2px solid #00d4ff' }} />
@@ -90,7 +90,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-mono"
             style={{
-              color: '#a855f7',
+              color: '#3b82f6',
               fontSize: '0.7rem',
               letterSpacing: '0.4em',
               marginBottom: 24,
@@ -106,8 +106,8 @@ const Hero = () => {
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: '#a855f7',
-                boxShadow: '0 0 10px #a855f7, 0 0 20px #00d4ff',
+                background: '#3b82f6',
+                boxShadow: '0 0 10px #3b82f6, 0 0 20px #00d4ff',
                 animation: 'pulse-neon 2s infinite',
               }}
             />
@@ -118,8 +118,8 @@ const Hero = () => {
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
-                background: '#a855f7',
-                boxShadow: '0 0 10px #a855f7, 0 0 20px #00d4ff',
+                background: '#3b82f6',
+                boxShadow: '0 0 10px #3b82f6, 0 0 20px #00d4ff',
                 animation: 'pulse-neon 2s infinite',
               }}
             />
@@ -140,13 +140,13 @@ const Hero = () => {
               lineHeight: 1.05,
               marginBottom: 12,
               textShadow:
-                '0 0 40px rgba(168, 85, 247,0.45), 0 0 80px rgba(0, 212, 255,0.2)',
+                '0 0 40px rgba(59, 130, 246,0.45), 0 0 80px rgba(0, 212, 255,0.2)',
             }}
           >
             {personalInfo.name.split(' ').map((word, i) => (
               <span
                 key={i}
-                style={{ display: 'block', color: i === 0 ? '#ffffff' : '#a855f7' }}
+                style={{ display: 'block', color: i === 0 ? '#ffffff' : '#3b82f6' }}
               >
                 {word}
               </span>
@@ -253,7 +253,7 @@ const Hero = () => {
                   letterSpacing: '0.1em',
                   transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#a855f7')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#3b82f6')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
               >
                 <span style={{ fontSize: '1rem' }}>{social.icon}</span>
@@ -276,9 +276,9 @@ const Hero = () => {
               width: 'clamp(200px, 25vw, 320px)',
               height: 'clamp(200px, 25vw, 320px)',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #a855f7, #00d4ff, rgba(255,255,255,0.15), #a855f7)',
+              background: 'linear-gradient(135deg, #3b82f6, #00d4ff, rgba(255,255,255,0.15), #3b82f6)',
               padding: 4,
-              boxShadow: '0 0 50px rgba(168, 85, 247,0.35), 0 0 100px rgba(0, 212, 255,0.12)',
+              boxShadow: '0 0 50px rgba(59, 130, 246,0.35), 0 0 100px rgba(0, 212, 255,0.12)',
               animation: 'pulse-neon 3s ease-in-out infinite',
             }}>
               <img
@@ -300,7 +300,7 @@ const Hero = () => {
               bottom: 16,
               right: 0,
               background: 'rgba(5,10,14,0.92)',
-              border: '1.5px solid #a855f7',
+              border: '1.5px solid #3b82f6',
               borderRadius: 20,
               padding: '6px 16px',
               display: 'flex',
@@ -311,9 +311,9 @@ const Hero = () => {
               <motion.span
                 animate={{ scale: [1, 1.4, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                style={{ width: 8, height: 8, borderRadius: '50%', background: '#a855f7', boxShadow: '0 0 10px #a855f7', display: 'inline-block' }}
+                style={{ width: 8, height: 8, borderRadius: '50%', background: '#3b82f6', boxShadow: '0 0 10px #3b82f6', display: 'inline-block' }}
               />
-              <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.7rem', color: '#a855f7', letterSpacing: '0.1em' }}>OPEN TO WORK</span>
+              <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.7rem', color: '#3b82f6', letterSpacing: '0.1em' }}>OPEN TO WORK</span>
             </div>
           </div>
         </motion.div>
@@ -347,8 +347,8 @@ const Hero = () => {
           style={{
             width: 1,
             height: 40,
-            background: 'linear-gradient(180deg, #a855f7, #00d4ff, transparent)',
-            boxShadow: '0 0 6px #a855f7',
+            background: 'linear-gradient(180deg, #3b82f6, #00d4ff, transparent)',
+            boxShadow: '0 0 6px #3b82f6',
           }}
         />
       </motion.div>

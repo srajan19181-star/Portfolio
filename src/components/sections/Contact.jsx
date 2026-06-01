@@ -68,7 +68,7 @@ const Contact = () => {
 
   const socialLinks = [
     { label: 'GitHub', url: personalInfo.github, color: '#e2e8f0', icon: '⌥', desc: '@srajan19181-star' },
-    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#a855f7', icon: '◈', desc: 'srajan-umrao' },
+    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#3b82f6', icon: '◈', desc: 'srajan-umrao' },
     { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#00d4ff', icon: '◉', desc: personalInfo.email },
     { label: 'Phone', url: `tel:${personalInfo.phone}`, color: '#ffffff', icon: '◎', desc: personalInfo.phone },
   ];
@@ -89,7 +89,7 @@ const Contact = () => {
           transform: 'translateX(-50%)',
           width: 600,
           height: 400,
-          background: 'radial-gradient(ellipse, rgba(168, 85, 247,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(59, 130, 246,0.06) 0%, transparent 70%)',
           filter: 'blur(60px)',
           pointerEvents: 'none',
         }}
@@ -143,12 +143,12 @@ const Contact = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
-                  borderBottom: '1px solid rgba(168, 85, 247,0.12)',
+                  borderBottom: '1px solid rgba(59, 130, 246,0.12)',
                 }}
               >
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff0080' }} />
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b' }} />
-                <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#a855f7' }} />
+                <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#3b82f6' }} />
                 <span
                   className="font-mono"
                   style={{ color: '#64748b', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.15em' }}
@@ -167,7 +167,7 @@ const Contact = () => {
                     <div style={{ fontSize: '3rem', marginBottom: 16 }}>✅</div>
                     <div
                       className="font-mono"
-                      style={{ color: '#a855f7', fontSize: '0.85rem', marginBottom: 8 }}
+                      style={{ color: '#3b82f6', fontSize: '0.85rem', marginBottom: 8 }}
                     >
                       MESSAGE TRANSMITTED
                     </div>
@@ -199,7 +199,7 @@ const Contact = () => {
                           className="font-mono"
                           style={{
                             display: 'block',
-                            color: '#a855f7',
+                            color: '#3b82f6',
                             fontSize: '0.65rem',
                             marginBottom: 8,
                             letterSpacing: '0.2em',
@@ -217,7 +217,7 @@ const Contact = () => {
                           style={{
                             width: '100%',
                             background: 'rgba(0,0,0,0.3)',
-                            border: '1px solid rgba(168, 85, 247,0.2)',
+                            border: '1px solid rgba(59, 130, 246,0.2)',
                             borderRadius: 6,
                             padding: '12px 16px',
                             color: '#e8f5e9',
@@ -227,10 +227,10 @@ const Contact = () => {
                             transition: 'border-color 0.3s',
                           }}
                           onFocus={(e) =>
-                            (e.target.style.borderColor = 'rgba(168, 85, 247,0.6)')
+                            (e.target.style.borderColor = 'rgba(59, 130, 246,0.6)')
                           }
                           onBlur={(e) =>
-                            (e.target.style.borderColor = 'rgba(168, 85, 247,0.2)')
+                            (e.target.style.borderColor = 'rgba(59, 130, 246,0.2)')
                           }
                         />
                       </div>
@@ -241,7 +241,7 @@ const Contact = () => {
                         className="font-mono"
                         style={{
                           display: 'block',
-                          color: '#a855f7',
+                          color: '#3b82f6',
                           fontSize: '0.65rem',
                           marginBottom: 8,
                           letterSpacing: '0.2em',
@@ -259,7 +259,7 @@ const Contact = () => {
                         style={{
                           width: '100%',
                           background: 'rgba(0,0,0,0.3)',
-                          border: '1px solid rgba(168, 85, 247,0.2)',
+                          border: '1px solid rgba(59, 130, 246,0.2)',
                           borderRadius: 6,
                           padding: '12px 16px',
                           color: '#e8f5e9',
@@ -270,10 +270,10 @@ const Contact = () => {
                           transition: 'border-color 0.3s',
                         }}
                         onFocus={(e) =>
-                          (e.target.style.borderColor = 'rgba(168, 85, 247,0.6)')
+                          (e.target.style.borderColor = 'rgba(59, 130, 246,0.6)')
                         }
                         onBlur={(e) =>
-                          (e.target.style.borderColor = 'rgba(168, 85, 247,0.2)')
+                          (e.target.style.borderColor = 'rgba(59, 130, 246,0.2)')
                         }
                       />
                     </div>
@@ -404,7 +404,7 @@ const Contact = () => {
               style={{
                 padding: '20px 24px',
                 marginTop: 8,
-                borderLeft: '3px solid #a855f7',
+                borderLeft: '3px solid #3b82f6',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 12,
@@ -417,15 +417,15 @@ const Contact = () => {
                   width: 10,
                   height: 10,
                   borderRadius: '50%',
-                  background: '#a855f7',
-                  boxShadow: '0 0 12px #a855f7',
+                  background: '#3b82f6',
+                  boxShadow: '0 0 12px #3b82f6',
                   flexShrink: 0,
                 }}
               />
               <div>
                 <div
                   className="font-display"
-                  style={{ color: '#a855f7', fontSize: '0.85rem', fontWeight: 600 }}
+                  style={{ color: '#3b82f6', fontSize: '0.85rem', fontWeight: 600 }}
                 >
                   Available for Full-Stack Internship
                 </div>

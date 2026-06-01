@@ -103,7 +103,7 @@ export const projects = [
     demo: "",
     status: "Complete",
     year: "2024",
-    color: "#a855f7",
+    color: "#3b82f6",
   },
   {
     id: 5,

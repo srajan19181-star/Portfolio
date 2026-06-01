@@ -13,9 +13,9 @@ const stats = [
 ];
 
 const interests = [
-  { label: 'Full-Stack Development', icon: '🔧', color: '#a855f7' },
+  { label: 'Full-Stack Development', icon: '🔧', color: '#3b82f6' },
   { label: 'AI Agent Building', icon: '🤖', color: '#00d4ff' },
-  { label: 'Backend Engineering', icon: '🌐', color: '#a855f7' },
+  { label: 'Backend Engineering', icon: '🌐', color: '#3b82f6' },
   { label: 'React & Redux', icon: '⚛️', color: '#ffffff' },
   { label: 'API Architecture', icon: '🔗', color: '#00d4ff' },
   { label: 'Competitive Coding', icon: '💡', color: '#f59e0b' },
@@ -41,7 +41,7 @@ const About = () => {
           width: 400,
           height: 400,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(168, 85, 247,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(59, 130, 246,0.07) 0%, transparent 70%)',
           filter: 'blur(60px)',
           pointerEvents: 'none',
         }}
@@ -112,16 +112,16 @@ const About = () => {
                 &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>name</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"{personalInfo.name}"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#a855f7' }}>role</span>:{' '}
+                &nbsp;&nbsp;<span style={{ color: '#3b82f6' }}>role</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"Full-Stack Developer"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#a855f7' }}>location</span>:{' '}
+                &nbsp;&nbsp;<span style={{ color: '#3b82f6' }}>location</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"{personalInfo.location}"</span>,
                 <br />
                 &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>passion</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"Building scalable APIs"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#a855f7' }}>status</span>:{' '}
+                &nbsp;&nbsp;<span style={{ color: '#3b82f6' }}>status</span>:{' '}
                 <span style={{ color: '#00d4ff' }}>"Open to Full-Stack Internships"</span>,
                 <br />
                 <span style={{ color: '#ffffff' }}>{'}'}</span>
@@ -182,7 +182,7 @@ const About = () => {
                   <div style={{ fontSize: '1.5rem', marginBottom: 8 }}>{stat.icon}</div>
                   <div
                     className="font-display glow-cyan"
-                    style={{ color: '#a855f7', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1 }}
+                    style={{ color: '#3b82f6', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1 }}
                   >
                     {stat.value}
                   </div>
@@ -206,7 +206,7 @@ const About = () => {
             >
               <div
                 className="font-mono"
-                style={{ color: '#a855f7', fontSize: '0.65rem', marginBottom: 20, letterSpacing: '0.3em' }}
+                style={{ color: '#3b82f6', fontSize: '0.65rem', marginBottom: 20, letterSpacing: '0.3em' }}
               >
                 // INTERESTS & FOCUS AREAS
               </div>
@@ -263,7 +263,7 @@ const About = () => {
                 <div style={{ color: '#e8f5e9', fontWeight: 600, fontSize: '1rem' }}>
                   B.Tech — Electronics & Communication Engg.
                 </div>
-                <div style={{ color: '#a855f7', fontSize: '0.85rem', marginTop: 4 }}>
+                <div style={{ color: '#3b82f6', fontSize: '0.85rem', marginTop: 4 }}>
                   IIIT Bhopal, MP
                 </div>
                 <div style={{ color: '#64748b', fontSize: '0.8rem', marginTop: 4 }}>

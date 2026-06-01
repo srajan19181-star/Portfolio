@@ -35,7 +35,7 @@ const allItems = [
     duration: 'Aug 2024 – Present',
     description:
       'Independently learned React.js, Node.js, Express.js, and MongoDB alongside formal coursework at IIIT Bhopal. Built 4+ real-world projects and now exploring AI agent development.',
-    color: '#a855f7',
+    color: '#3b82f6',
     icon: '🚀',
   },
   ...timelineItems,
@@ -188,7 +188,7 @@ const Experience = () => {
           top: '50%',
           width: 400,
           height: 600,
-          background: 'radial-gradient(circle, rgba(168, 85, 247,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(59, 130, 246,0.05) 0%, transparent 70%)',
           filter: 'blur(80px)',
           pointerEvents: 'none',
         }}
@@ -219,9 +219,9 @@ const Experience = () => {
               left: '50%',
               top: 0,
               width: 2,
-              background: 'linear-gradient(180deg, transparent, #a855f7, #00d4ff, #ffffff, transparent)',
+              background: 'linear-gradient(180deg, transparent, #3b82f6, #00d4ff, #ffffff, transparent)',
               transform: 'translateX(-50%)',
-              boxShadow: '0 0 12px rgba(168, 85, 247,0.4)',
+              boxShadow: '0 0 12px rgba(59, 130, 246,0.4)',
             }}
           />
 
