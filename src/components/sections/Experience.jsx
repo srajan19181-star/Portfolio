@@ -137,7 +137,7 @@ const TimelineCard = ({ item }) => (
     </div>
     <h3
       className="font-display"
-      style={{ color: '#e2e8f0', fontSize: '1rem', fontWeight: 700, marginBottom: 4 }}
+      style={{ color: 'var(--text-secondary)', fontSize: '1rem', fontWeight: 700, marginBottom: 4 }}
     >
       {item.title}
     </h3>
@@ -150,7 +150,7 @@ const TimelineCard = ({ item }) => (
       <p
         style={{
           fontFamily: "'Inter', sans-serif",
-          color: '#64748b',
+          color: 'var(--text-muted)',
           fontSize: '0.85rem',
           lineHeight: 1.6,
         }}

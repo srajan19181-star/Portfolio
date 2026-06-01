@@ -130,7 +130,7 @@ const Achievements = () => {
                   <h3
                     className="font-display"
                     style={{
-                      color: '#e2e8f0',
+                      color: 'var(--text-secondary)',
                       fontSize: '0.95rem',
                       fontWeight: 700,
                       lineHeight: 1.3,
@@ -192,14 +192,14 @@ const Achievements = () => {
                   </div>
                   <h3
                     className="font-display"
-                    style={{ color: '#ffffff', fontSize: '0.9rem', fontWeight: 700, marginBottom: 12 }}
+                    style={{ color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 700, marginBottom: 12 }}
                   >
                     {ach.title}
                   </h3>
                   <p
                     style={{
                       fontFamily: "'Inter', sans-serif",
-                      color: '#94a3b8',
+                      color: 'var(--text-secondary)',
                       fontSize: '0.82rem',
                       lineHeight: 1.6,
                     }}
@@ -235,7 +235,7 @@ const Achievements = () => {
             >
               1484
             </div>
-            <div className="font-mono" style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
+            <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
               CODECHEF MAX RATING
             </div>
           </div>
@@ -243,11 +243,11 @@ const Achievements = () => {
           <div style={{ textAlign: 'center' }}>
             <div
               className="font-display"
-              style={{ color: '#e2e8f0', fontSize: '2.5rem', fontWeight: 800 }}
+              style={{ color: 'var(--text-secondary)', fontSize: '2.5rem', fontWeight: 800 }}
             >
               2★
             </div>
-            <div className="font-mono" style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
+            <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
               CODECHEF DIVISION
             </div>
           </div>
@@ -259,7 +259,7 @@ const Achievements = () => {
             >
               100+
             </div>
-            <div className="font-mono" style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
+            <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
               PROBLEMS SOLVED
             </div>
           </div>
@@ -271,7 +271,7 @@ const Achievements = () => {
             >
               1W
             </div>
-            <div className="font-mono" style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
+            <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
               HACKATHON PART.
             </div>
           </div>

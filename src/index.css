@@ -3,25 +3,49 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary accents */
-  --neon-cyan: #3b82f6; /* Blue */
-  --neon-green: #00d4ff; /* Blue */
-  --neon-light-green: #ffffff; /* White */
-  --neon-purple: #312e81;
-  --neon-pink: #ffffff;
-  /* Dark background */
-  --dark-bg: #030712;
-  --dark-surface: #0a0f1e;
-  --dark-card: #0d1424;
-  --glass-bg: rgba(10, 15, 22, 0.78);
+  /* Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-surface: #f1f5f9;
+  --bg-card: #e2e8f0;
+  --bg-overlay: rgba(255, 255, 255, 0.92);
+  --glass-bg: rgba(255, 255, 255, 0.78);
   --glass-border: rgba(59, 130, 246, 0.18);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
   --text-muted: #64748b;
+
+  /* Accents */
+  --neon-cyan: #3b82f6; /* Blue */
+  --neon-green: #0ea5e9; /* Sky Blue */
+  --neon-light-green: #000000; /* Dark for accents */
+  --neon-purple: #1e40af;
+  --neon-pink: #0f172a;
+  
   --font-display: 'Orbitron', monospace;
   --font-body: 'Rajdhani', sans-serif;
   --font-ui: 'Inter', sans-serif;
   --font-mono: 'Share Tech Mono', monospace;
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-primary: #030712;
+  --bg-surface: #0a0f1e;
+  --bg-card: #0d1424;
+  --bg-overlay: rgba(5, 10, 14, 0.92);
+  --glass-bg: rgba(10, 15, 22, 0.78);
+  --glass-border: rgba(59, 130, 246, 0.18);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --neon-cyan: #3b82f6; 
+  --neon-green: #00d4ff; 
+  --neon-light-green: #ffffff; 
+  --neon-purple: #312e81;
+  --neon-pink: #ffffff;
 }
 
 * {
@@ -35,11 +59,12 @@ html {
 }
 
 body {
-  background-color: var(--dark-bg);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
   overflow-x: hidden;
   cursor: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ===== CUSTOM CURSOR ===== */
@@ -86,7 +111,7 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--dark-bg);
+  background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--neon-cyan), var(--neon-green));

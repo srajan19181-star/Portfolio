@@ -135,7 +135,7 @@ const Hero = () => {
             style={{
               fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
               fontWeight: 900,
-              color: '#ffffff',
+              color: 'var(--text-primary)',
               letterSpacing: '0.05em',
               lineHeight: 1.05,
               marginBottom: 12,
@@ -146,7 +146,7 @@ const Hero = () => {
             {personalInfo.name.split(' ').map((word, i) => (
               <span
                 key={i}
-                style={{ display: 'block', color: i === 0 ? '#ffffff' : '#3b82f6' }}
+                style={{ display: 'block', color: i === 0 ? 'var(--text-primary)' : '#3b82f6' }}
               >
                 {word}
               </span>
@@ -168,7 +168,7 @@ const Hero = () => {
               style={{
                 fontFamily: "'Rajdhani', sans-serif",
                 fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
-                color: '#94a3b8',
+                color: 'var(--text-secondary)',
                 letterSpacing: '0.1em',
                 fontWeight: 500,
               }}
@@ -183,7 +183,7 @@ const Hero = () => {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-              color: '#64748b',
+              color: 'var(--text-muted)',
               maxWidth: 580,
               marginBottom: 48,
               lineHeight: 1.7,
@@ -246,7 +246,7 @@ const Hero = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
-                  color: '#64748b',
+                  color: 'var(--text-muted)',
                   textDecoration: 'none',
                   fontFamily: "'Share Tech Mono', monospace",
                   fontSize: '0.75rem',
@@ -254,7 +254,7 @@ const Hero = () => {
                   transition: 'all 0.3s ease',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#3b82f6')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#64748b')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
               >
                 <span style={{ fontSize: '1rem' }}>{social.icon}</span>
                 {social.label}
@@ -299,7 +299,7 @@ const Hero = () => {
               position: 'absolute',
               bottom: 16,
               right: 0,
-              background: 'rgba(5,10,14,0.92)',
+              background: 'var(--bg-overlay)',
               border: '1.5px solid #3b82f6',
               borderRadius: 20,
               padding: '6px 16px',

@@ -172,7 +172,7 @@ export const achievements = [
     description:
       "Actively exploring AI agent development — building autonomous workflows using LLM APIs, function calling, and agent orchestration frameworks. Applying AI capabilities to real-world web products.",
     icon: "🤖",
-    color: "#ffffff",
+    color: "var(--text-primary)",
   },
   {
     title: "MERN Stack Self-Taught",

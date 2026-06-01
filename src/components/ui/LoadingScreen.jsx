@@ -84,7 +84,7 @@ const LoadingScreen = ({ onComplete }) => {
               </div>
               <div
                 className="font-mono text-xs"
-                style={{ color: '#64748b', letterSpacing: '0.3em' }}
+                style={{ color: 'var(--text-muted)', letterSpacing: '0.3em' }}
               >
                 PORTFOLIO OPERATING SYSTEM
               </div>
@@ -103,7 +103,7 @@ const LoadingScreen = ({ onComplete }) => {
                   transition={{ duration: 0.2 }}
                   className="text-sm mb-1"
                   style={{
-                    color: i === lines.length - 1 ? '#3b82f6' : '#64748b',
+                    color: i === lines.length - 1 ? '#3b82f6' : 'var(--text-muted)',
                     fontSize: '0.75rem',
                   }}
                 >
@@ -125,7 +125,7 @@ const LoadingScreen = ({ onComplete }) => {
               <div className="flex justify-between mb-2">
                 <span
                   className="font-mono"
-                  style={{ fontSize: '0.65rem', color: '#475569', letterSpacing: '0.2em' }}
+                  style={{ fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.2em' }}
                 >
                   BOOT SEQUENCE
                 </span>

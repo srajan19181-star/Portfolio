@@ -67,10 +67,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { label: 'GitHub', url: personalInfo.github, color: '#e2e8f0', icon: '⌥', desc: '@srajan19181-star' },
+    { label: 'GitHub', url: personalInfo.github, color: 'var(--text-secondary)', icon: '⌥', desc: '@srajan19181-star' },
     { label: 'LinkedIn', url: personalInfo.linkedin, color: '#3b82f6', icon: '◈', desc: 'srajan-umrao' },
     { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#00d4ff', icon: '◉', desc: personalInfo.email },
-    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: '#ffffff', icon: '◎', desc: personalInfo.phone },
+    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: 'var(--text-primary)', icon: '◎', desc: personalInfo.phone },
   ];
 
   return (
@@ -109,7 +109,7 @@ const Contact = () => {
           <p
             style={{
               fontFamily: "'Inter', sans-serif",
-              color: '#64748b',
+              color: 'var(--text-muted)',
               marginTop: 16,
               fontSize: '0.95rem',
             }}
@@ -151,7 +151,7 @@ const Contact = () => {
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#3b82f6' }} />
                 <span
                   className="font-mono"
-                  style={{ color: '#64748b', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.15em' }}
+                  style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.15em' }}
                 >
                   MESSAGE.TERMINAL
                 </span>
@@ -174,7 +174,7 @@ const Contact = () => {
                     <p
                       style={{
                         fontFamily: "'Inter', sans-serif",
-                        color: '#64748b',
+                        color: 'var(--text-muted)',
                         fontSize: '0.85rem',
                       }}
                     >
@@ -335,7 +335,7 @@ const Contact = () => {
           >
             <div
               className="font-mono"
-              style={{ color: '#64748b', fontSize: '0.65rem', letterSpacing: '0.3em', marginBottom: 8 }}
+              style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.3em', marginBottom: 8 }}
             >
               // DIRECT CHANNELS
             </div>
@@ -391,7 +391,7 @@ const Contact = () => {
                     {social.desc}
                   </div>
                 </div>
-                <div style={{ marginLeft: 'auto', color: '#64748b', fontSize: '0.8rem' }}>→</div>
+                <div style={{ marginLeft: 'auto', color: 'var(--text-muted)', fontSize: '0.8rem' }}>→</div>
               </motion.a>
             ))}
 
@@ -431,7 +431,7 @@ const Contact = () => {
                 </div>
                 <div
                   className="font-mono"
-                  style={{ color: '#64748b', fontSize: '0.65rem', marginTop: 4 }}
+                  style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginTop: 4 }}
                 >
                   MERN / Full-Stack / Backend Roles
                 </div>

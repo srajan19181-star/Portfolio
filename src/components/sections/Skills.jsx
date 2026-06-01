@@ -98,7 +98,7 @@ const Skills = () => {
                   activeCategory === cat
                     ? 'rgba(0,212,255,0.12)'
                     : 'transparent',
-                color: activeCategory === cat ? '#00d4ff' : '#475569',
+                color: activeCategory === cat ? '#00d4ff' : 'var(--text-muted)',
                 fontFamily: "'Orbitron', monospace",
                 fontSize: '0.65rem',
                 letterSpacing: '0.1em',
@@ -226,7 +226,7 @@ const Skills = () => {
                 <div
                   className="font-body"
                   style={{
-                    color: isHovered ? '#e2e8f0' : '#94a3b8',
+                    color: isHovered ? 'var(--text-secondary)' : 'var(--text-secondary)',
                     fontSize: '0.85rem',
                     fontWeight: 600,
                     marginBottom: 4,

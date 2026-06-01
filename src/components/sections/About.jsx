@@ -16,7 +16,7 @@ const interests = [
   { label: 'Full-Stack Development', icon: '🔧', color: '#3b82f6' },
   { label: 'AI Agent Building', icon: '🤖', color: '#00d4ff' },
   { label: 'Backend Engineering', icon: '🌐', color: '#3b82f6' },
-  { label: 'React & Redux', icon: '⚛️', color: '#ffffff' },
+  { label: 'React & Redux', icon: '⚛️', color: 'var(--text-primary)' },
   { label: 'API Architecture', icon: '🔗', color: '#00d4ff' },
   { label: 'Competitive Coding', icon: '💡', color: '#f59e0b' },
 ];
@@ -103,11 +103,11 @@ const About = () => {
                 // IDENTITY.JSON
               </div>
 
-              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.85rem', color: '#64748b', lineHeight: 2 }}>
+              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 2 }}>
                 <span style={{ color: '#7c3aed' }}>const</span>{' '}
                 <span style={{ color: '#00d4ff' }}>developer</span>{' '}
-                <span style={{ color: '#ffffff' }}>=</span>{' '}
-                <span style={{ color: '#ffffff' }}>{'{'}</span>
+                <span style={{ color: 'var(--text-primary)' }}>=</span>{' '}
+                <span style={{ color: 'var(--text-primary)' }}>{'{'}</span>
                 <br />
                 &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>name</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"{personalInfo.name}"</span>,
@@ -124,7 +124,7 @@ const About = () => {
                 &nbsp;&nbsp;<span style={{ color: '#3b82f6' }}>status</span>:{' '}
                 <span style={{ color: '#00d4ff' }}>"Open to Full-Stack Internships"</span>,
                 <br />
-                <span style={{ color: '#ffffff' }}>{'}'}</span>
+                <span style={{ color: 'var(--text-primary)' }}>{'}'}</span>
               </div>
             </div>
 
@@ -133,7 +133,7 @@ const About = () => {
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  color: '#94a3b8',
+                  color: 'var(--text-secondary)',
                   lineHeight: 1.8,
                   fontSize: '0.95rem',
                   marginBottom: 20,
@@ -144,7 +144,7 @@ const About = () => {
               <p
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  color: '#64748b',
+                  color: 'var(--text-muted)',
                   lineHeight: 1.8,
                   fontSize: '0.9rem',
                 }}
@@ -188,7 +188,7 @@ const About = () => {
                   </div>
                   <div
                     className="font-mono"
-                    style={{ color: '#64748b', fontSize: '0.65rem', marginTop: 6, letterSpacing: '0.1em' }}
+                    style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginTop: 6, letterSpacing: '0.1em' }}
                   >
                     {stat.label}
                   </div>
@@ -266,7 +266,7 @@ const About = () => {
                 <div style={{ color: '#3b82f6', fontSize: '0.85rem', marginTop: 4 }}>
                   IIIT Bhopal, MP
                 </div>
-                <div style={{ color: '#64748b', fontSize: '0.8rem', marginTop: 4 }}>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: 4 }}>
                   Aug 2024 – May 2028 · CGPA 8.2
                 </div>
               </div>

@@ -124,7 +124,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
       <h3
         className="font-display"
         style={{
-          color: '#e2e8f0',
+          color: 'var(--text-secondary)',
           fontSize: '1.1rem',
           fontWeight: 700,
           marginBottom: 6,
@@ -149,7 +149,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
       <p
         style={{
           fontFamily: "'Inter', sans-serif",
-          color: '#64748b',
+          color: 'var(--text-muted)',
           fontSize: '0.85rem',
           lineHeight: 1.6,
           marginBottom: 20,
@@ -172,7 +172,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
               borderRadius: 4,
               background: 'rgba(255,255,255,0.04)',
               border: '1px solid rgba(255,255,255,0.08)',
-              color: '#64748b',
+              color: 'var(--text-muted)',
               fontSize: '0.7rem',
               fontFamily: "'Share Tech Mono', monospace",
             }}
@@ -184,7 +184,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
           <span
             style={{
               padding: '3px 10px',
-              color: '#475569',
+              color: 'var(--text-muted)',
               fontSize: '0.7rem',
               fontFamily: "'Share Tech Mono', monospace",
             }}
@@ -204,7 +204,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
             onClick={(e) => e.stopPropagation()}
             className="interactive"
             style={{
-              color: '#475569',
+              color: 'var(--text-muted)',
               fontSize: '0.75rem',
               fontFamily: "'Share Tech Mono', monospace",
               textDecoration: 'none',
@@ -214,7 +214,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
               transition: 'color 0.3s',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#00d4ff')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
           >
             ⌥ GitHub
           </a>
@@ -227,7 +227,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
             onClick={(e) => e.stopPropagation()}
             className="interactive"
             style={{
-              color: '#475569',
+              color: 'var(--text-muted)',
               fontSize: '0.75rem',
               fontFamily: "'Share Tech Mono', monospace",
               textDecoration: 'none',
@@ -237,7 +237,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
               transition: 'color 0.3s',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#00ff88')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
           >
             ◈ Live Demo
           </a>
@@ -304,7 +304,7 @@ const ProjectModal = ({ project, onClose }) => {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => e.stopPropagation()}
         style={{
-          background: '#0a0f1e',
+          background: 'var(--bg-surface)',
           border: `1px solid ${color}40`,
           borderRadius: 20,
           padding: 40,
@@ -326,7 +326,7 @@ const ProjectModal = ({ project, onClose }) => {
             right: 20,
             background: 'rgba(255,255,255,0.05)',
             border: '1px solid rgba(255,255,255,0.1)',
-            color: '#94a3b8',
+            color: 'var(--text-secondary)',
             width: 36,
             height: 36,
             borderRadius: '50%',
@@ -391,7 +391,7 @@ const ProjectModal = ({ project, onClose }) => {
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
-            color: '#94a3b8',
+            color: 'var(--text-secondary)',
             lineHeight: 1.8,
             fontSize: '0.95rem',
             marginBottom: 32,
@@ -404,7 +404,7 @@ const ProjectModal = ({ project, onClose }) => {
         <div style={{ marginBottom: 32 }}>
           <div
             className="font-mono"
-            style={{ color: '#475569', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.2em' }}
+            style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.2em' }}
           >
             // TECH STACK
           </div>
@@ -417,7 +417,7 @@ const ProjectModal = ({ project, onClose }) => {
                   borderRadius: 6,
                   background: `${color}10`,
                   border: `1px solid ${color}25`,
-                  color: '#e2e8f0',
+                  color: 'var(--text-secondary)',
                   fontSize: '0.8rem',
                   fontFamily: "'Share Tech Mono', monospace",
                 }}
@@ -506,7 +506,7 @@ const Projects = () => {
                   border: `1px solid ${filter === cat ? '#00d4ff' : 'rgba(0,212,255,0.15)'}`,
                   borderRadius: 6,
                   background: filter === cat ? 'rgba(0,212,255,0.1)' : 'transparent',
-                  color: filter === cat ? '#00d4ff' : '#475569',
+                  color: filter === cat ? '#00d4ff' : 'var(--text-muted)',
                   fontFamily: "'Orbitron', monospace",
                   fontSize: '0.65rem',
                   letterSpacing: '0.1em',
