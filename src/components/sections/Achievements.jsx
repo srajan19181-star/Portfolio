@@ -74,7 +74,7 @@ const Achievements = () => {
                   transformStyle: 'preserve-3d',
                   transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: flipped[i] ? 'rotateY(180deg)' : 'rotateY(0deg)',
-                  cursor: 'none',
+
                 }}
               >
                 {/* Front */}
@@ -257,7 +257,7 @@ const Achievements = () => {
               className="font-display"
               style={{ color: '#00ff88', fontSize: '2.5rem', fontWeight: 800 }}
             >
-              100+
+              500+
             </div>
             <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
               PROBLEMS SOLVED
@@ -269,10 +269,10 @@ const Achievements = () => {
               className="font-display"
               style={{ color: '#f59e0b', fontSize: '2.5rem', fontWeight: 800 }}
             >
-              1W
+              Participant
             </div>
             <div className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
-              HACKATHON PART.
+              HackXios 2k25
             </div>
           </div>
         </motion.div>

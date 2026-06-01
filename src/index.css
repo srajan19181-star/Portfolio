@@ -63,8 +63,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   overflow-x: hidden;
-  cursor: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ===== CUSTOM CURSOR ===== */
@@ -169,8 +168,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  cursor: none;
-  overflow: hidden;
+    overflow: hidden;
   transition: all 0.3s ease;
   border-radius: 4px;
 }

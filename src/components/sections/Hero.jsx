@@ -100,18 +100,7 @@ const Hero = () => {
               gap: 12,
             }}
           >
-            <span
-              style={{
-                display: 'inline-block',
-                width: 8,
-                height: 8,
-                borderRadius: '50%',
-                background: '#3b82f6',
-                boxShadow: '0 0 10px #3b82f6, 0 0 20px #00d4ff',
-                animation: 'pulse-neon 2s infinite',
-              }}
-            />
-            SYSTEM ONLINE — PORTFOLIO v2.0
+            
             <span
               style={{
                 display: 'inline-block',
@@ -339,7 +328,7 @@ const Hero = () => {
           className="font-mono"
           style={{ color: '#2d4a35', fontSize: '0.6rem', letterSpacing: '0.3em' }}
         >
-          SCROLL
+          
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

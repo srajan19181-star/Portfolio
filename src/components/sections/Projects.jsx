@@ -47,7 +47,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
         border: `1px solid ${color}25`,
         borderRadius: 16,
         padding: 28,
-        cursor: 'none',
+        cursor: '',
         transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
         transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
         backdropFilter: 'blur(16px)',
@@ -330,7 +330,7 @@ const ProjectModal = ({ project, onClose }) => {
             width: 36,
             height: 36,
             borderRadius: '50%',
-            cursor: 'none',
+
             fontSize: '0.9rem',
             display: 'flex',
             alignItems: 'center',
@@ -510,7 +510,7 @@ const Projects = () => {
                   fontFamily: "'Orbitron', monospace",
                   fontSize: '0.65rem',
                   letterSpacing: '0.1em',
-                  cursor: 'none',
+
                   transition: 'all 0.3s',
                 }}
               >

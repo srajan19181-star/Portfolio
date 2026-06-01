@@ -102,7 +102,7 @@ const Navbar = () => {
         {/* Logo */}
         <div
           onClick={() => scrollTo('#hero')}
-          style={{ cursor: 'none' }}
+          style={{  }}
           className="interactive"
         >
           <span
@@ -110,12 +110,6 @@ const Navbar = () => {
             style={{ color: '#3b82f6', fontSize: '1rem', letterSpacing: '0.15em', fontWeight: 700 }}
           >
             SU
-          </span>
-          <span
-            className="font-mono"
-            style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.2em' }}
-          >
-            v2.0
           </span>
         </div>
 
@@ -134,7 +128,7 @@ const Navbar = () => {
                   style={{
                     background: 'none',
                     border: 'none',
-                    cursor: 'none',
+
                     fontFamily: "'Orbitron', monospace",
                     fontSize: '0.58rem',
                     letterSpacing: '0.08em',
@@ -182,7 +176,7 @@ const Navbar = () => {
             style={{
               background: 'none',
               border: 'none',
-              cursor: 'none',
+              cursor:'pointer',
               color: 'var(--neon-cyan)',
               fontSize: '1.2rem',
               display: 'flex',
@@ -193,7 +187,7 @@ const Navbar = () => {
             }}
             title="Toggle Light/Dark Mode"
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {theme === 'dark' ? '💡' : '🌙'}
           </button>
 
           {/* Mobile hamburger */}
@@ -203,7 +197,7 @@ const Navbar = () => {
             style={{
               background: 'none',
               border: 'none',
-              cursor: 'none',
+              cursor:'pointer',
               color: '#3b82f6',
               fontSize: '1.2rem',
             }}
@@ -236,7 +230,7 @@ const Navbar = () => {
               style={{
                 background: 'none',
                 border: 'none',
-                cursor: 'none',
+
                 fontFamily: "'Orbitron', monospace",
                 fontSize: '0.75rem',
                 letterSpacing: '0.15em',

@@ -153,7 +153,7 @@ export const achievements = [
     date: "Dec 2025",
     description:
       "Participated in HackXios 2025, building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time using statistical anomaly detection. Delivered a fully working demo in 24 hours as part of a 3-person team at InAmigos Foundation.",
-    icon: "👨‍💻",
+    icon: "",
     color: "#f59e0b",
   },
   {
@@ -162,7 +162,7 @@ export const achievements = [
     date: "Ongoing",
     description:
       "Achieved 2-Star rating on CodeChef (max rating 1484). Regularly competing in Div. 2 & Div. 3 contests with 100+ problems solved across CodeChef and Codeforces.",
-    icon: "⭐",
+    icon: "",
     color: "#00d4ff",
   },
   {
@@ -171,7 +171,7 @@ export const achievements = [
     date: "2026 – Present",
     description:
       "Actively exploring AI agent development — building autonomous workflows using LLM APIs, function calling, and agent orchestration frameworks. Applying AI capabilities to real-world web products.",
-    icon: "🤖",
+    icon: "",
     color: "var(--text-primary)",
   },
   {
@@ -180,7 +180,7 @@ export const achievements = [
     date: "2024–2026",
     description:
       "Independently mastered the complete MERN stack alongside formal ECE coursework at IIIT Bhopal (CGPA 8.2), building 4+ real-world projects to demonstrate hands-on proficiency.",
-    icon: "🚀",
+    icon: "",
     color: "#7c3aed",
   },
 ];

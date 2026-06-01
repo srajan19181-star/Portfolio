@@ -36,7 +36,7 @@ const allItems = [
     description:
       'Independently learned React.js, Node.js, Express.js, and MongoDB alongside formal coursework at IIIT Bhopal. Built 4+ real-world projects and now exploring AI agent development.',
     color: '#3b82f6',
-    icon: '🚀',
+    icon: '',
   },
   ...timelineItems,
   {
@@ -45,9 +45,9 @@ const allItems = [
     org: 'InAmigos Foundation',
     duration: 'Dec 2025',
     description:
-      'Participated in HackXios 2025 at InAmigos Foundation, building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time. Delivered a working demo in 24 hours with a 3-person team.',
+      'Participated in HackXios 2025 at InAmigos Foundation, building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time. Delivered a working demo in 24 hours with a 6-person team.',
     color: '#f59e0b',
-    icon: '👨‍💻',
+    icon: '',
   },
 ];
 

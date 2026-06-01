@@ -356,7 +356,7 @@ const Contact = () => {
                   alignItems: 'center',
                   gap: 16,
                   textDecoration: 'none',
-                  cursor: 'none',
+
                 }}
                 whileHover={{ x: 4 }}
               >

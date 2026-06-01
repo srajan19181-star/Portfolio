@@ -64,7 +64,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: 48 }}
         >
-          <div className="section-tag">// TECH STACK</div>
+          <div className="section-tag"> TECH STACK</div>
           <h2 className="section-title">Skills & Expertise</h2>
           <div className="section-line" />
         </motion.div>
@@ -102,7 +102,7 @@ const Skills = () => {
                 fontFamily: "'Orbitron', monospace",
                 fontSize: '0.65rem',
                 letterSpacing: '0.1em',
-                cursor: 'none',
+                cursor: '',
                 transition: 'all 0.3s ease',
                 boxShadow:
                   activeCategory === cat

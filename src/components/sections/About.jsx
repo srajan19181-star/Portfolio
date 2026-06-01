@@ -6,19 +6,19 @@ import { personalInfo } from '../../data/portfolioData';
  * About Section — personal story with animated floating info cards
  */
 const stats = [
-  { label: 'Projects Built', value: '5+', icon: '⚡' },
-  { label: 'Tech Stack', value: 'MERN', icon: '🛠' },
-  { label: 'CGPA', value: '8.2', icon: '🎓' },
-  { label: 'HackXios', value: 'Part.', icon: '👨‍💻' },
+  { label: 'Projects Built', value: '5+',  },
+  { label: 'Tech Stack', value: 'MERN', },
+  { label: 'CGPA', value: '8.2',  },
+  { label: 'HackXios', value: 'Part.', },
 ];
 
 const interests = [
-  { label: 'Full-Stack Development', icon: '🔧', color: '#3b82f6' },
-  { label: 'AI Agent Building', icon: '🤖', color: '#00d4ff' },
-  { label: 'Backend Engineering', icon: '🌐', color: '#3b82f6' },
-  { label: 'React & Redux', icon: '⚛️', color: 'var(--text-primary)' },
-  { label: 'API Architecture', icon: '🔗', color: '#00d4ff' },
-  { label: 'Competitive Coding', icon: '💡', color: '#f59e0b' },
+  { label: 'Full-Stack Development', color: '#3b82f6' },
+  { label: 'AI Agent Building', color: '#00d4ff' },
+  { label: 'Backend Engineering', color: '#3b82f6' },
+  { label: 'React & Redux', color: 'var(--text-primary)' },
+  { label: 'API Architecture', color: '#00d4ff' },
+  { label: 'Competitive Coding', color: '#f59e0b' },
 ];
 
 const About = () => {
@@ -55,8 +55,8 @@ const About = () => {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: 72 }}
         >
-          <div className="section-tag">// ABOUT ME</div>
-          <h2 className="section-title">Who Am I?</h2>
+          <div className="section-tag">ABOUT ME</div>
+          <h2 className="section-title">Who Am I ?</h2>
           <div className="section-line" />
         </motion.div>
 

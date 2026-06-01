@@ -11,7 +11,7 @@ const bootLines = [
   '> MOUNTING HOLOGRAPHIC DISPLAY...',
   '> CALIBRATING 3D ENVIRONMENT...',
   '> LOADING PORTFOLIO DATA...',
-  '> SRAJAN UMRAO OS v2.0 — READY',
+  '> SRAJAN UMRAO OS — READY',
 ];
 
 const LoadingScreen = ({ onComplete }) => {
