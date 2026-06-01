@@ -272,7 +272,7 @@ const Achievements = () => {
               1W
             </div>
             <div className="font-mono" style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.2em' }}>
-              HACKATHON WIN
+              HACKATHON PART.
             </div>
           </div>
         </motion.div>

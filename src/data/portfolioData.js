@@ -103,7 +103,7 @@ export const projects = [
     demo: "",
     status: "Complete",
     year: "2024",
-    color: "#10b981",
+    color: "#a855f7",
   },
   {
     id: 5,
@@ -172,7 +172,7 @@ export const achievements = [
     description:
       "Actively exploring AI agent development — building autonomous workflows using LLM APIs, function calling, and agent orchestration frameworks. Applying AI capabilities to real-world web products.",
     icon: "🤖",
-    color: "#00ff88",
+    color: "#ffffff",
   },
   {
     title: "MERN Stack Self-Taught",
