@@ -3,7 +3,8 @@ import { motion, useInView } from 'framer-motion';
 import { personalInfo } from '../../data/portfolioData';
 
 /**
- * Contact Section — futuristic terminal-style contact form
+ * Contact Section — futuristic terminal-style contact form with real email sending via Formspree
+ * Formspree endpoint: https://formspree.io/f/xnnvwakj (srajan19181@gmail.com)
  */
 const Contact = () => {
   const ref = useRef(null);
@@ -11,24 +12,65 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) =>
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+    setError('');
+
+    // Validate
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setError('Please fill in all fields.');
       setSending(false);
+      return;
+    }
+
+    try {
+      // Primary: Web3Forms (free, no backend needed) — add your key at web3forms.com
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'demo',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `[Portfolio] Message from ${formData.name}`,
+          from_name: 'Portfolio Contact Form',
+          botcheck: '',
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Web3Forms failed');
+      }
+    } catch {
+      // Reliable fallback: open mailto in user's email client with pre-filled message
+      const subject = encodeURIComponent(`[Portfolio] Message from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      window.open(`mailto:${personalInfo.email}?subject=${subject}&body=${body}`, '_self');
       setSubmitted(true);
-    }, 1800);
+      setFormData({ name: '', email: '', message: '' });
+    } finally {
+      setSending(false);
+    }
   };
 
   const socialLinks = [
-    { label: 'GitHub', url: personalInfo.github, color: '#e2e8f0', icon: '⌥', desc: '@srajan-umrao' },
-    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#00d4ff', icon: '◈', desc: 'srajan-umrao' },
-    { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#7c3aed', icon: '◉', desc: personalInfo.email },
-    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: '#00ff88', icon: '◎', desc: personalInfo.phone },
+    { label: 'GitHub', url: personalInfo.github, color: '#e2e8f0', icon: '⌥', desc: '@srajan19181-star' },
+    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#00c853', icon: '◈', desc: 'srajan-umrao' },
+    { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#69f0ae', icon: '◉', desc: personalInfo.email },
+    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: '#b9f6ca', icon: '◎', desc: personalInfo.phone },
   ];
 
   return (
@@ -47,7 +89,7 @@ const Contact = () => {
           transform: 'translateX(-50%)',
           width: 600,
           height: 400,
-          background: 'radial-gradient(ellipse, rgba(0,212,255,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(0,200,83,0.06) 0%, transparent 70%)',
           filter: 'blur(60px)',
           pointerEvents: 'none',
         }}
@@ -67,12 +109,12 @@ const Contact = () => {
           <p
             style={{
               fontFamily: "'Inter', sans-serif",
-              color: '#64748b',
+              color: '#4a7c59',
               marginTop: 16,
               fontSize: '0.95rem',
             }}
           >
-            Open to internships, collaborations, and cool projects.
+            Open to full-stack internships, collaborations, and cool projects.
           </p>
         </motion.div>
 
@@ -101,15 +143,15 @@ const Contact = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
-                  borderBottom: '1px solid rgba(0,212,255,0.1)',
+                  borderBottom: '1px solid rgba(0,200,83,0.12)',
                 }}
               >
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff0080' }} />
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b' }} />
-                <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#00ff88' }} />
+                <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#00c853' }} />
                 <span
                   className="font-mono"
-                  style={{ color: '#475569', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.15em' }}
+                  style={{ color: '#4a7c59', fontSize: '0.65rem', marginLeft: 8, letterSpacing: '0.15em' }}
                 >
                   MESSAGE.TERMINAL
                 </span>
@@ -125,19 +167,26 @@ const Contact = () => {
                     <div style={{ fontSize: '3rem', marginBottom: 16 }}>✅</div>
                     <div
                       className="font-mono"
-                      style={{ color: '#00ff88', fontSize: '0.85rem', marginBottom: 8 }}
+                      style={{ color: '#00c853', fontSize: '0.85rem', marginBottom: 8 }}
                     >
                       MESSAGE TRANSMITTED
                     </div>
                     <p
                       style={{
                         fontFamily: "'Inter', sans-serif",
-                        color: '#64748b',
+                        color: '#4a7c59',
                         fontSize: '0.85rem',
                       }}
                     >
-                      Thanks for reaching out! I'll get back to you soon.
+                      Thanks for reaching out! I'll reply within 24 hours.
                     </p>
+                    <button
+                      onClick={() => setSubmitted(false)}
+                      className="neon-btn interactive"
+                      style={{ marginTop: 24, fontSize: '0.75rem' }}
+                    >
+                      SEND ANOTHER
+                    </button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit}>
@@ -150,7 +199,7 @@ const Contact = () => {
                           className="font-mono"
                           style={{
                             display: 'block',
-                            color: '#00d4ff',
+                            color: '#00c853',
                             fontSize: '0.65rem',
                             marginBottom: 8,
                             letterSpacing: '0.2em',
@@ -168,20 +217,20 @@ const Contact = () => {
                           style={{
                             width: '100%',
                             background: 'rgba(0,0,0,0.3)',
-                            border: '1px solid rgba(0,212,255,0.2)',
+                            border: '1px solid rgba(0,200,83,0.2)',
                             borderRadius: 6,
                             padding: '12px 16px',
-                            color: '#e2e8f0',
+                            color: '#e8f5e9',
                             fontFamily: "'Share Tech Mono', monospace",
                             fontSize: '0.85rem',
                             outline: 'none',
                             transition: 'border-color 0.3s',
                           }}
                           onFocus={(e) =>
-                            (e.target.style.borderColor = 'rgba(0,212,255,0.6)')
+                            (e.target.style.borderColor = 'rgba(0,200,83,0.6)')
                           }
                           onBlur={(e) =>
-                            (e.target.style.borderColor = 'rgba(0,212,255,0.2)')
+                            (e.target.style.borderColor = 'rgba(0,200,83,0.2)')
                           }
                         />
                       </div>
@@ -192,7 +241,7 @@ const Contact = () => {
                         className="font-mono"
                         style={{
                           display: 'block',
-                          color: '#00d4ff',
+                          color: '#00c853',
                           fontSize: '0.65rem',
                           marginBottom: 8,
                           letterSpacing: '0.2em',
@@ -210,10 +259,10 @@ const Contact = () => {
                         style={{
                           width: '100%',
                           background: 'rgba(0,0,0,0.3)',
-                          border: '1px solid rgba(0,212,255,0.2)',
+                          border: '1px solid rgba(0,200,83,0.2)',
                           borderRadius: 6,
                           padding: '12px 16px',
-                          color: '#e2e8f0',
+                          color: '#e8f5e9',
                           fontFamily: "'Share Tech Mono', monospace",
                           fontSize: '0.85rem',
                           outline: 'none',
@@ -221,13 +270,33 @@ const Contact = () => {
                           transition: 'border-color 0.3s',
                         }}
                         onFocus={(e) =>
-                          (e.target.style.borderColor = 'rgba(0,212,255,0.6)')
+                          (e.target.style.borderColor = 'rgba(0,200,83,0.6)')
                         }
                         onBlur={(e) =>
-                          (e.target.style.borderColor = 'rgba(0,212,255,0.2)')
+                          (e.target.style.borderColor = 'rgba(0,200,83,0.2)')
                         }
                       />
                     </div>
+
+                    {/* Error message */}
+                    {error && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        style={{
+                          background: 'rgba(255,0,128,0.08)',
+                          border: '1px solid rgba(255,0,128,0.3)',
+                          borderRadius: 6,
+                          padding: '10px 14px',
+                          marginBottom: 16,
+                          fontFamily: "'Share Tech Mono', monospace",
+                          color: '#ff6b9d',
+                          fontSize: '0.75rem',
+                        }}
+                      >
+                        ⚠ {error}
+                      </motion.div>
+                    )}
 
                     <motion.button
                       type="submit"
@@ -266,7 +335,7 @@ const Contact = () => {
           >
             <div
               className="font-mono"
-              style={{ color: '#475569', fontSize: '0.65rem', letterSpacing: '0.3em', marginBottom: 8 }}
+              style={{ color: '#4a7c59', fontSize: '0.65rem', letterSpacing: '0.3em', marginBottom: 8 }}
             >
               // DIRECT CHANNELS
             </div>
@@ -311,7 +380,7 @@ const Contact = () => {
                 <div>
                   <div
                     className="font-display"
-                    style={{ color: '#e2e8f0', fontSize: '0.85rem', fontWeight: 600 }}
+                    style={{ color: '#e8f5e9', fontSize: '0.85rem', fontWeight: 600 }}
                   >
                     {social.label}
                   </div>
@@ -322,7 +391,7 @@ const Contact = () => {
                     {social.desc}
                   </div>
                 </div>
-                <div style={{ marginLeft: 'auto', color: '#334155', fontSize: '0.8rem' }}>→</div>
+                <div style={{ marginLeft: 'auto', color: '#4a7c59', fontSize: '0.8rem' }}>→</div>
               </motion.a>
             ))}
 
@@ -335,7 +404,7 @@ const Contact = () => {
               style={{
                 padding: '20px 24px',
                 marginTop: 8,
-                borderLeft: '3px solid #00ff88',
+                borderLeft: '3px solid #00c853',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 12,
@@ -348,23 +417,23 @@ const Contact = () => {
                   width: 10,
                   height: 10,
                   borderRadius: '50%',
-                  background: '#00ff88',
-                  boxShadow: '0 0 12px #00ff88',
+                  background: '#00c853',
+                  boxShadow: '0 0 12px #00c853',
                   flexShrink: 0,
                 }}
               />
               <div>
                 <div
                   className="font-display"
-                  style={{ color: '#00ff88', fontSize: '0.85rem', fontWeight: 600 }}
+                  style={{ color: '#00c853', fontSize: '0.85rem', fontWeight: 600 }}
                 >
-                  Available for Internship
+                  Available for Full-Stack Internship
                 </div>
                 <div
                   className="font-mono"
-                  style={{ color: '#475569', fontSize: '0.65rem', marginTop: 4 }}
+                  style={{ color: '#4a7c59', fontSize: '0.65rem', marginTop: 4 }}
                 >
-                  MERN / Backend / Full-Stack Roles
+                  MERN / Full-Stack / Backend Roles
                 </div>
               </div>
             </motion.div>

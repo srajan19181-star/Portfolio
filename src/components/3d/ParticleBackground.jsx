@@ -1,7 +1,6 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
-import * as THREE from 'three';
 
 /**
  * ParticleStars — 5000 floating particles that drift slowly in 3D space

@@ -61,10 +61,10 @@ const Navbar = () => {
       <div
         style={{
           background: scrolled
-            ? 'rgba(10, 15, 30, 0.92)'
-            : 'rgba(10, 15, 30, 0.7)',
+            ? 'rgba(5, 10, 14, 0.95)'
+            : 'rgba(5, 10, 14, 0.75)',
           backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(0, 212, 255, 0.15)',
+          border: '1px solid rgba(0, 200, 83, 0.18)',
           borderRadius: 12,
           padding: '12px 24px',
           display: 'flex',
@@ -72,7 +72,7 @@ const Navbar = () => {
           justifyContent: 'space-between',
           transition: 'all 0.3s ease',
           boxShadow: scrolled
-            ? '0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,212,255,0.05)'
+            ? '0 8px 32px rgba(0,0,0,0.6), 0 0 20px rgba(0,200,83,0.06)'
             : 'none',
         }}
       >
@@ -84,7 +84,7 @@ const Navbar = () => {
         >
           <span
             className="font-display glow-cyan"
-            style={{ color: '#00d4ff', fontSize: '1rem', letterSpacing: '0.15em', fontWeight: 700 }}
+            style={{ color: '#00c853', fontSize: '1rem', letterSpacing: '0.15em', fontWeight: 700 }}
           >
             SU
           </span>
@@ -137,8 +137,8 @@ const Navbar = () => {
                       left: 0,
                       right: 0,
                       height: 1,
-                      background: 'linear-gradient(90deg, transparent, #00d4ff, transparent)',
-                      boxShadow: '0 0 6px #00d4ff',
+                      background: 'linear-gradient(90deg, transparent, #00c853, transparent)',
+                      boxShadow: '0 0 6px #00c853',
                     }}
                   />
                 )}
@@ -155,7 +155,7 @@ const Navbar = () => {
             background: 'none',
             border: 'none',
             cursor: 'none',
-            color: '#00d4ff',
+            color: '#00c853',
             fontSize: '1.2rem',
           }}
         >

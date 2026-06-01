@@ -8,17 +8,17 @@ import { personalInfo } from '../../data/portfolioData';
 const stats = [
   { label: 'Projects Built', value: '4+', icon: '⚡' },
   { label: 'Tech Stack', value: 'MERN', icon: '🛠' },
-  { label: 'Rating', value: '1484', icon: '⭐' },
-  { label: 'Hackathons', value: '1W', icon: '🏆' },
+  { label: 'CGPA', value: '8.2', icon: '🎓' },
+  { label: 'HackXios', value: 'Won', icon: '🏆' },
 ];
 
 const interests = [
-  { label: 'Backend Engineering', icon: '🔧', color: '#00d4ff' },
-  { label: 'API Architecture', icon: '🌐', color: '#7c3aed' },
-  { label: 'React & Redux', icon: '⚛️', color: '#00ff88' },
+  { label: 'Full-Stack Development', icon: '🔧', color: '#00c853' },
+  { label: 'AI Agent Building', icon: '🤖', color: '#69f0ae' },
+  { label: 'Backend Engineering', icon: '🌐', color: '#00c853' },
+  { label: 'React & Redux', icon: '⚛️', color: '#b9f6ca' },
+  { label: 'API Architecture', icon: '🔗', color: '#69f0ae' },
   { label: 'Competitive Coding', icon: '💡', color: '#f59e0b' },
-  { label: 'AI & ML', icon: '🤖', color: '#ff0080' },
-  { label: 'Open Source', icon: '🚀', color: '#00d4ff' },
 ];
 
 const About = () => {
@@ -41,7 +41,7 @@ const About = () => {
           width: 400,
           height: 400,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,200,83,0.07) 0%, transparent 70%)',
           filter: 'blur(60px)',
           pointerEvents: 'none',
         }}
@@ -112,17 +112,17 @@ const About = () => {
                 &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>name</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"{personalInfo.name}"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>role</span>:{' '}
-                <span style={{ color: '#f59e0b' }}>"MERN Stack Developer"</span>,
+                &nbsp;&nbsp;<span style={{ color: '#00c853' }}>role</span>:{' '}
+                <span style={{ color: '#f59e0b' }}>"Full-Stack Developer"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>location</span>:{' '}
+                &nbsp;&nbsp;<span style={{ color: '#00c853' }}>location</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"{personalInfo.location}"</span>,
                 <br />
                 &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>passion</span>:{' '}
                 <span style={{ color: '#f59e0b' }}>"Building scalable APIs"</span>,
                 <br />
-                &nbsp;&nbsp;<span style={{ color: '#00ff88' }}>status</span>:{' '}
-                <span style={{ color: '#00ff88' }}>"Open to Internships"</span>,
+                &nbsp;&nbsp;<span style={{ color: '#00c853' }}>status</span>:{' '}
+                <span style={{ color: '#69f0ae' }}>"Open to Full-Stack Internships"</span>,
                 <br />
                 <span style={{ color: '#ffffff' }}>{'}'}</span>
               </div>

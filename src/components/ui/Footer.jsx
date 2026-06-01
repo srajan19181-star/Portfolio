@@ -11,7 +11,7 @@ const Footer = () => {
     <footer
       style={{
         padding: '40px 24px',
-        borderTop: '1px solid rgba(0,212,255,0.08)',
+        borderTop: '1px solid rgba(0, 200, 83, 0.1)',
         position: 'relative',
         zIndex: 10,
       }}
@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           <span
             className="font-display glow-cyan"
-            style={{ color: '#00d4ff', fontSize: '0.9rem', letterSpacing: '0.15em' }}
+            style={{ color: '#00c853', fontSize: '0.9rem', letterSpacing: '0.15em' }}
           >
             {personalInfo.name.toUpperCase()}
           </span>
@@ -66,7 +66,7 @@ const Footer = () => {
                 transition: 'color 0.3s',
                 letterSpacing: '0.1em',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#00d4ff')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#00c853')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}
             >
               {link.label}

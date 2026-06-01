@@ -63,7 +63,7 @@ const LoadingScreen = ({ onComplete }) => {
               width: 300,
               height: 300,
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(0,200,83,0.08) 0%, transparent 70%)',
               filter: 'blur(40px)',
             }}
           />
@@ -78,13 +78,13 @@ const LoadingScreen = ({ onComplete }) => {
             >
               <div
                 className="font-display text-3xl font-bold glow-cyan mb-1"
-                style={{ color: '#00d4ff', letterSpacing: '0.2em' }}
+                style={{ color: '#00c853', letterSpacing: '0.2em' }}
               >
                 SRAJAN.SYS
               </div>
               <div
                 className="font-mono text-xs"
-                style={{ color: '#475569', letterSpacing: '0.3em' }}
+                style={{ color: '#4a7c59', letterSpacing: '0.3em' }}
               >
                 PORTFOLIO OPERATING SYSTEM
               </div>
@@ -103,7 +103,7 @@ const LoadingScreen = ({ onComplete }) => {
                   transition={{ duration: 0.2 }}
                   className="text-sm mb-1"
                   style={{
-                    color: i === lines.length - 1 ? '#00d4ff' : '#64748b',
+                    color: i === lines.length - 1 ? '#00c853' : '#4a7c59',
                     fontSize: '0.75rem',
                   }}
                 >
@@ -114,7 +114,7 @@ const LoadingScreen = ({ onComplete }) => {
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
-                style={{ color: '#00d4ff', fontSize: '0.75rem' }}
+                style={{ color: '#00c853', fontSize: '0.75rem' }}
               >
                 █
               </motion.span>
@@ -131,7 +131,7 @@ const LoadingScreen = ({ onComplete }) => {
                 </span>
                 <span
                   className="font-mono"
-                  style={{ fontSize: '0.65rem', color: '#00d4ff' }}
+                  style={{ fontSize: '0.65rem', color: '#00c853' }}
                 >
                   {progress}%
                 </span>
@@ -139,7 +139,7 @@ const LoadingScreen = ({ onComplete }) => {
               <div
                 style={{
                   height: 2,
-                  background: 'rgba(0,212,255,0.1)',
+                  background: 'rgba(0,200,83,0.1)',
                   borderRadius: 2,
                   overflow: 'hidden',
                 }}
@@ -147,8 +147,8 @@ const LoadingScreen = ({ onComplete }) => {
                 <motion.div
                   style={{
                     height: '100%',
-                    background: 'linear-gradient(90deg, #00d4ff, #7c3aed)',
-                    boxShadow: '0 0 10px #00d4ff',
+                    background: 'linear-gradient(90deg, #00c853, #69f0ae)',
+                    boxShadow: '0 0 10px #00c853',
                     borderRadius: 2,
                   }}
                   initial={{ width: 0 }}

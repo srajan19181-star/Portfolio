@@ -55,7 +55,7 @@ const Hero = () => {
           height: 700,
           borderRadius: '50%',
           background:
-            'radial-gradient(circle, rgba(0,212,255,0.06) 0%, rgba(124,58,237,0.04) 40%, transparent 70%)',
+            'radial-gradient(circle, rgba(0,200,83,0.07) 0%, rgba(27,94,32,0.05) 40%, transparent 70%)',
           filter: 'blur(60px)',
           top: '50%',
           left: '50%',
@@ -66,20 +66,55 @@ const Hero = () => {
 
       {/* Animated corner brackets */}
       <div style={{ position: 'absolute', top: 80, left: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #00d4ff', borderLeft: '2px solid #00d4ff' }} />
+        <div style={{ width: 30, height: 30, borderTop: '2px solid #00c853', borderLeft: '2px solid #00c853' }} />
       </div>
       <div style={{ position: 'absolute', top: 80, right: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #00d4ff', borderRight: '2px solid #00d4ff' }} />
+        <div style={{ width: 30, height: 30, borderTop: '2px solid #00c853', borderRight: '2px solid #00c853' }} />
       </div>
       <div style={{ position: 'absolute', bottom: 80, left: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderBottom: '2px solid #00d4ff', borderLeft: '2px solid #00d4ff' }} />
+        <div style={{ width: 30, height: 30, borderBottom: '2px solid #69f0ae', borderLeft: '2px solid #69f0ae' }} />
       </div>
       <div style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderBottom: '2px solid #00d4ff', borderRight: '2px solid #00d4ff' }} />
+        <div style={{ width: 30, height: 30, borderBottom: '2px solid #69f0ae', borderRight: '2px solid #69f0ae' }} />
       </div>
 
       {/* Main content */}
       <div style={{ textAlign: 'center', maxWidth: 900, position: 'relative', zIndex: 2 }}>
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          style={{ marginBottom: 28, display: 'flex', justifyContent: 'center' }}
+        >
+          <div style={{
+            width: 120,
+            height: 120,
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #00c853, #69f0ae, #ffffff20)',
+            padding: 3,
+            boxShadow: '0 0 30px rgba(0,200,83,0.4), 0 0 60px rgba(105,240,174,0.15)',
+            animation: 'pulse-neon 3s ease-in-out infinite',
+          }}>
+            <img
+              src={personalInfo.photo}
+              alt={personalInfo.name}
+              style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                objectPosition: 'top',
+                display: 'block',
+              }}
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.parentElement.style.background = 'linear-gradient(135deg, #00c853, #1b5e20)';
+              }}
+            />
+          </div>
+        </motion.div>
+
         {/* System tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,7 +122,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-mono"
           style={{
-            color: '#00d4ff',
+            color: '#00c853',
             fontSize: '0.7rem',
             letterSpacing: '0.4em',
             marginBottom: 24,
@@ -103,8 +138,8 @@ const Hero = () => {
               width: 8,
               height: 8,
               borderRadius: '50%',
-              background: '#00ff88',
-              boxShadow: '0 0 10px #00ff88',
+              background: '#00c853',
+              boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
               animation: 'pulse-neon 2s infinite',
             }}
           />
@@ -115,8 +150,8 @@ const Hero = () => {
               width: 8,
               height: 8,
               borderRadius: '50%',
-              background: '#00ff88',
-              boxShadow: '0 0 10px #00ff88',
+              background: '#00c853',
+              boxShadow: '0 0 10px #00c853, 0 0 20px #69f0ae',
               animation: 'pulse-neon 2s infinite',
             }}
           />
@@ -137,13 +172,13 @@ const Hero = () => {
             lineHeight: 1.05,
             marginBottom: 12,
             textShadow:
-              '0 0 40px rgba(0,212,255,0.4), 0 0 80px rgba(0,212,255,0.2)',
+              '0 0 40px rgba(0,200,83,0.45), 0 0 80px rgba(105,240,174,0.2)',
           }}
         >
           {personalInfo.name.split(' ').map((word, i) => (
             <span
               key={i}
-              style={{ display: 'block', color: i === 0 ? '#ffffff' : '#00d4ff' }}
+              style={{ display: 'block', color: i === 0 ? '#ffffff' : '#00c853' }}
             >
               {word}
             </span>
@@ -243,15 +278,15 @@ const Hero = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 8,
-                color: '#475569',
+                color: '#4a7c59',
                 textDecoration: 'none',
                 fontFamily: "'Share Tech Mono', monospace",
                 fontSize: '0.75rem',
                 letterSpacing: '0.1em',
                 transition: 'all 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#00d4ff')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#00c853')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#4a7c59')}
             >
               <span style={{ fontSize: '1rem' }}>{social.icon}</span>
               {social.label}
@@ -278,7 +313,7 @@ const Hero = () => {
       >
         <span
           className="font-mono"
-          style={{ color: '#334155', fontSize: '0.6rem', letterSpacing: '0.3em' }}
+          style={{ color: '#2d4a35', fontSize: '0.6rem', letterSpacing: '0.3em' }}
         >
           SCROLL
         </span>
@@ -288,8 +323,8 @@ const Hero = () => {
           style={{
             width: 1,
             height: 40,
-            background: 'linear-gradient(180deg, #00d4ff, transparent)',
-            boxShadow: '0 0 6px #00d4ff',
+            background: 'linear-gradient(180deg, #00c853, #69f0ae, transparent)',
+            boxShadow: '0 0 6px #00c853',
           }}
         />
       </motion.div>

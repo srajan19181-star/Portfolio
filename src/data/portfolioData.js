@@ -6,20 +6,21 @@
 export const personalInfo = {
   name: "Srajan Umrao",
   taglines: [
-    "MERN Stack Developer",
-    "Backend Engineer",
+    "Full-Stack Developer",
+    "MERN Stack Engineer",
+    "Backend Architect",
     "React.js Specialist",
-    "API Architect",
+    "AI Agent Builder",
     "Problem Solver",
   ],
-  bio: "First-year B.Tech (ECE) student at IIIT Bhopal with hands-on MERN stack expertise — building scalable backends with Node.js, Express.js & MongoDB and dynamic frontends with React.js & Redux. CodeChef 2-Star rated competitive programmer seeking a MERN / Backend Development Internship.",
+  bio: "Full-Stack Developer and MERN Stack Engineer pursuing B.Tech ECE at IIIT Bhopal (CGPA 8.2). I build scalable REST APIs with Node.js & Express, craft dynamic frontends with React.js & Redux, and am actively exploring AI agent development. HackXios 2025 winner · CodeChef 2★ · Seeking Full-Stack Internship.",
   location: "Bhopal, MP, India",
   email: "srajan19181@gmail.com",
   phone: "+91 9336802588",
-  github: "https://github.com/srajan-umrao",
-  linkedin: "https://linkedin.com/in/srajan-umrao",
-  twitter: "",
-  resume: "/resume.pdf", // Replace with actual PDF path
+  github: "https://github.com/srajan19181-star",
+  linkedin: "https://www.linkedin.com/in/srajan-umrao-827a81324/",
+  photo: "/profile.jpg",
+  resume: "/resume.pdf",
 };
 
 export const skills = [
@@ -98,15 +99,40 @@ export const projects = [
       "A pixel-accurate, fully responsive clone of the Razorpay landing page using Tailwind CSS flexbox/grid system. Replicates nav bars, hero sections, feature cards, and footer with precision.",
     tech: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript"],
     category: "Frontend",
-    github: "https://github.com/srajan-umrao/razorpay-clone",
+    github: "https://github.com/srajan19181-star/razorpay-clone",
     demo: "",
     status: "Complete",
     year: "2024",
     color: "#10b981",
   },
+  {
+    id: 5,
+    title: "Developer Portfolio",
+    subtitle: "This Portfolio Website",
+    description:
+      "A cinematic, fully animated personal portfolio built with React + Vite, Three.js 3D particle background, GSAP parallax, Framer Motion animations, and a custom neon cursor. Features a loading screen, typing animation, glass-morphism cards, and a dark cyberpunk aesthetic. Deployed on Vercel.",
+    tech: ["React.js", "Three.js", "Framer Motion", "GSAP", "Tailwind CSS", "Vite", "Vercel"],
+    category: "Full-Stack",
+    github: "https://github.com/srajan19181-star",
+    demo: "https://portfolio-mocha-beta-w1tljjqjx4.vercel.app/",
+    status: "Live",
+    year: "2026",
+    color: "#00d4ff",
+  },
 ];
 
-export const experience = []; // No work experience yet — student
+export const experience = [
+  {
+    role: "AI Web Developer",
+    company: "InAmigos Foundation",
+    location: "Remote",
+    duration: "2025 – Present",
+    description:
+      "Working as an AI Web Developer at InAmigos Foundation — an NGO focused on technology-driven social impact. Developing AI-integrated web features, contributing to full-stack modules, and applying MERN stack skills to real-world social-impact products.",
+    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "AI Integration"],
+    type: "Volunteer / NGO",
+  },
+];
 
 export const education = [
   {
@@ -115,23 +141,23 @@ export const education = [
     location: "Bhopal, Madhya Pradesh",
     duration: "Aug 2024 – May 2028",
     description:
-      "First-year undergraduate student. Coursework includes Data Structures & Algorithms, Computer Networks, OOP, and Digital Electronics.",
-    gpa: "",
+      "Undergraduate student with CGPA 8.2. Coursework includes Data Structures & Algorithms, Computer Networks, Object-Oriented Programming, and Digital Electronics. Actively self-learning full-stack development and AI agent frameworks alongside formal studies.",
+    gpa: "8.2 / 10",
   },
 ];
 
 export const achievements = [
   {
-    title: "HackXios 2025 — AI Smart Threat Detection",
-    type: "Hackathon",
+    title: "HackXios 2025 — Winner",
+    type: "Hackathon 🥇",
     date: "Dec 2025",
     description:
-      "Built an AI-powered cybersecurity prototype detecting anomalous network behavior in real time using statistical anomaly detection. Delivered a working demo in 24 hours as part of a 3-person team.",
+      "Won HackXios 2025 by building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time using statistical anomaly detection. Delivered a fully working demo in 24 hours as part of a 3-person team at InAmigos Foundation.",
     icon: "🏆",
     color: "#f59e0b",
   },
   {
-    title: "CodeChef 2-Star",
+    title: "CodeChef 2-Star Rated",
     type: "Competitive Programming",
     date: "Ongoing",
     description:
@@ -140,11 +166,20 @@ export const achievements = [
     color: "#00d4ff",
   },
   {
+    title: "Building AI Agents",
+    type: "Current Focus",
+    date: "2026 – Present",
+    description:
+      "Actively exploring AI agent development — building autonomous workflows using LLM APIs, function calling, and agent orchestration frameworks. Applying AI capabilities to real-world web products.",
+    icon: "🤖",
+    color: "#00ff88",
+  },
+  {
     title: "MERN Stack Self-Taught",
-    type: "Skill",
+    type: "Skill Achievement",
     date: "2024–2026",
     description:
-      "Independently mastered the complete MERN stack (MongoDB, Express.js, React.js, Node.js) alongside formal ECE coursework, building real-world projects to demonstrate proficiency.",
+      "Independently mastered the complete MERN stack alongside formal ECE coursework at IIIT Bhopal (CGPA 8.2), building 4+ real-world projects to demonstrate hands-on proficiency.",
     icon: "🚀",
     color: "#7c3aed",
   },

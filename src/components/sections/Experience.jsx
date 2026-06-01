@@ -30,22 +30,32 @@ const timelineItems = [
 const allItems = [
   {
     type: 'milestone',
-    title: 'Started MERN Stack Journey',
+    title: 'Started Full-Stack Journey',
     org: 'Self-Taught',
     duration: 'Aug 2024 – Present',
     description:
-      'Independently learned React.js, Node.js, Express.js, and MongoDB alongside formal coursework. Built 4+ real-world projects to solidify skills.',
-    color: '#00ff88',
+      'Independently learned React.js, Node.js, Express.js, and MongoDB alongside formal coursework at IIIT Bhopal. Built 4+ real-world projects and now exploring AI agent development.',
+    color: '#00c853',
     icon: '🚀',
   },
   ...timelineItems,
   {
+    type: 'experience',
+    title: 'AI Web Developer',
+    org: 'InAmigos Foundation',
+    duration: '2025 – Present',
+    description:
+      'Working as an AI Web Developer at InAmigos Foundation — building AI-integrated web features and full-stack MERN modules for real-world social-impact products.',
+    color: '#69f0ae',
+    icon: '🤖',
+  },
+  {
     type: 'milestone',
-    title: 'HackXios 2025',
-    org: 'AI Smart Threat Detection',
+    title: 'HackXios 2025 — Winner 🏆',
+    org: 'InAmigos Foundation',
     duration: 'Dec 2025',
     description:
-      'Won hackathon by building an AI cybersecurity prototype. Delivered in 24 hours with a 3-person team.',
+      'Won HackXios 2025 at InAmigos Foundation by building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time. Delivered in 24 hours with a 3-person team.',
     color: '#f59e0b',
     icon: '🏆',
   },
@@ -188,7 +198,7 @@ const Experience = () => {
           top: '50%',
           width: 400,
           height: 600,
-          background: 'radial-gradient(circle, rgba(0,255,136,0.04) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(0,200,83,0.05) 0%, transparent 70%)',
           filter: 'blur(80px)',
           pointerEvents: 'none',
         }}
@@ -219,9 +229,9 @@ const Experience = () => {
               left: '50%',
               top: 0,
               width: 2,
-              background: 'linear-gradient(180deg, transparent, #00d4ff, #7c3aed, #00ff88, transparent)',
+              background: 'linear-gradient(180deg, transparent, #00c853, #69f0ae, #b9f6ca, transparent)',
               transform: 'translateX(-50%)',
-              boxShadow: '0 0 10px rgba(0,212,255,0.3)',
+              boxShadow: '0 0 12px rgba(0,200,83,0.4)',
             }}
           />
 
