@@ -80,40 +80,7 @@ const Hero = () => {
 
       {/* Main content */}
       <div style={{ textAlign: 'center', maxWidth: 900, position: 'relative', zIndex: 2 }}>
-        {/* Profile Photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          style={{ marginBottom: 28, display: 'flex', justifyContent: 'center' }}
-        >
-          <div style={{
-            width: 120,
-            height: 120,
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #00c853, #69f0ae, #ffffff20)',
-            padding: 3,
-            boxShadow: '0 0 30px rgba(0,200,83,0.4), 0 0 60px rgba(105,240,174,0.15)',
-            animation: 'pulse-neon 3s ease-in-out infinite',
-          }}>
-            <img
-              src={personalInfo.photo}
-              alt={personalInfo.name}
-              style={{
-                width: '100%',
-                height: '100%',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                objectPosition: 'top',
-                display: 'block',
-              }}
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.parentElement.style.background = 'linear-gradient(135deg, #00c853, #1b5e20)';
-              }}
-            />
-          </div>
-        </motion.div>
+
 
         {/* System tag */}
         <motion.div
