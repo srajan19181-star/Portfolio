@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalInfo } from '../../data/portfolioData';
 
@@ -6,10 +6,10 @@ import { personalInfo } from '../../data/portfolioData';
  * About Section — personal story with animated floating info cards
  */
 const stats = [
-  { label: 'Projects Built', value: '4+', icon: '⚡' },
+  { label: 'Projects Built', value: '5+', icon: '⚡' },
   { label: 'Tech Stack', value: 'MERN', icon: '🛠' },
   { label: 'CGPA', value: '8.2', icon: '🎓' },
-  { label: 'HackXios', value: 'Won', icon: '🏆' },
+  { label: 'HackXios', value: 'Part.', icon: '👨‍💻' },
 ];
 
 const interests = [
@@ -154,8 +154,63 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right — Stats + Interests */}
+          {/* Right — Photo + Stats + Interests */}
           <div>
+            {/* Profile Photo — adjustable size */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              style={{ marginBottom: 28, display: 'flex', justifyContent: 'center' }}
+            >
+              <div style={{ position: 'relative' }}>
+                {/* Outer glow ring */}
+                <div style={{
+                  width: 220,
+                  height: 220,
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #00c853, #69f0ae, rgba(255,255,255,0.15), #00c853)',
+                  padding: 3,
+                  boxShadow: '0 0 40px rgba(0,200,83,0.35), 0 0 80px rgba(105,240,174,0.12)',
+                  animation: 'pulse-neon 3s ease-in-out infinite',
+                }}>
+                  <img
+                    src={personalInfo.photo}
+                    alt={personalInfo.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '50%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+                {/* Status badge */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: 8,
+                  right: 8,
+                  background: 'rgba(5,10,14,0.92)',
+                  border: '1.5px solid #00c853',
+                  borderRadius: 20,
+                  padding: '4px 12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  backdropFilter: 'blur(10px)',
+                }}>
+                  <motion.span
+                    animate={{ scale: [1, 1.4, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    style={{ width: 7, height: 7, borderRadius: '50%', background: '#00c853', boxShadow: '0 0 8px #00c853', display: 'inline-block' }}
+                  />
+                  <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.6rem', color: '#00c853', letterSpacing: '0.1em' }}>OPEN TO WORK</span>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Stats grid */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -180,13 +235,13 @@ const About = () => {
                   <div style={{ fontSize: '1.5rem', marginBottom: 8 }}>{stat.icon}</div>
                   <div
                     className="font-display glow-cyan"
-                    style={{ color: '#00d4ff', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1 }}
+                    style={{ color: '#00c853', fontSize: '1.8rem', fontWeight: 800, lineHeight: 1 }}
                   >
                     {stat.value}
                   </div>
                   <div
                     className="font-mono"
-                    style={{ color: '#475569', fontSize: '0.65rem', marginTop: 6, letterSpacing: '0.1em' }}
+                    style={{ color: '#4a7c59', fontSize: '0.65rem', marginTop: 6, letterSpacing: '0.1em' }}
                   >
                     {stat.label}
                   </div>
@@ -204,7 +259,7 @@ const About = () => {
             >
               <div
                 className="font-mono"
-                style={{ color: '#00d4ff', fontSize: '0.65rem', marginBottom: 20, letterSpacing: '0.3em' }}
+                style={{ color: '#00c853', fontSize: '0.65rem', marginBottom: 20, letterSpacing: '0.3em' }}
               >
                 // INTERESTS & FOCUS AREAS
               </div>
@@ -253,19 +308,19 @@ const About = () => {
             >
               <div
                 className="font-mono"
-                style={{ color: '#7c3aed', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.3em' }}
+                style={{ color: '#69f0ae', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.3em' }}
               >
                 // EDUCATION
               </div>
               <div style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-                <div style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>
+                <div style={{ color: '#e8f5e9', fontWeight: 600, fontSize: '1rem' }}>
                   B.Tech — Electronics & Communication Engg.
                 </div>
-                <div style={{ color: '#00d4ff', fontSize: '0.85rem', marginTop: 4 }}>
+                <div style={{ color: '#00c853', fontSize: '0.85rem', marginTop: 4 }}>
                   IIIT Bhopal, MP
                 </div>
-                <div style={{ color: '#475569', fontSize: '0.8rem', marginTop: 4 }}>
-                  Aug 2024 – May 2028
+                <div style={{ color: '#4a7c59', fontSize: '0.8rem', marginTop: 4 }}>
+                  Aug 2024 – May 2028 · CGPA 8.2
                 </div>
               </div>
             </motion.div>

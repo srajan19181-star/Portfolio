@@ -13,7 +13,7 @@ export const personalInfo = {
     "AI Agent Builder",
     "Problem Solver",
   ],
-  bio: "Full-Stack Developer and MERN Stack Engineer pursuing B.Tech ECE at IIIT Bhopal (CGPA 8.2). I build scalable REST APIs with Node.js & Express, craft dynamic frontends with React.js & Redux, and am actively exploring AI agent development. HackXios 2025 winner · CodeChef 2★ · Seeking Full-Stack Internship.",
+  bio: "Full-Stack Developer and MERN Stack Engineer pursuing B.Tech ECE at IIIT Bhopal (CGPA 8.2). I build scalable REST APIs with Node.js & Express, craft dynamic frontends with React.js & Redux, and am actively exploring AI agent development. HackXios 2025 Participant · CodeChef 2★ · Seeking Full-Stack Internship.",
   location: "Bhopal, MP, India",
   email: "srajan19181@gmail.com",
   phone: "+91 9336802588",
@@ -148,12 +148,12 @@ export const education = [
 
 export const achievements = [
   {
-    title: "HackXios 2025 — Winner",
-    type: "Hackathon 🥇",
+    title: "HackXios 2025 — Participant",
+    type: "Hackathon",
     date: "Dec 2025",
     description:
-      "Won HackXios 2025 by building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time using statistical anomaly detection. Delivered a fully working demo in 24 hours as part of a 3-person team at InAmigos Foundation.",
-    icon: "🏆",
+      "Participated in HackXios 2025, building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time using statistical anomaly detection. Delivered a fully working demo in 24 hours as part of a 3-person team at InAmigos Foundation.",
+    icon: "👨‍💻",
     color: "#f59e0b",
   },
   {

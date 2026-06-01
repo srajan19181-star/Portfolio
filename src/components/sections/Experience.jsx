@@ -51,13 +51,13 @@ const allItems = [
   },
   {
     type: 'milestone',
-    title: 'HackXios 2025 — Winner 🏆',
+    title: 'HackXios 2025 — Participant',
     org: 'InAmigos Foundation',
     duration: 'Dec 2025',
     description:
-      'Won HackXios 2025 at InAmigos Foundation by building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time. Delivered in 24 hours with a 3-person team.',
+      'Participated in HackXios 2025 at InAmigos Foundation, building an AI-powered cybersecurity prototype that detects anomalous network behavior in real time. Delivered a working demo in 24 hours with a 3-person team.',
     color: '#f59e0b',
-    icon: '🏆',
+    icon: '👨‍💻',
   },
 ];
 
