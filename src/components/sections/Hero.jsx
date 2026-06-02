@@ -65,19 +65,7 @@ const Hero = () => {
         }}
       />
 
-      {/* Animated corner brackets */}
-      <div style={{ position: 'absolute', top: 80, left: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #3b82f6', borderLeft: '2px solid #3b82f6' }} />
-      </div>
-      <div style={{ position: 'absolute', top: 80, right: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderTop: '2px solid #3b82f6', borderRight: '2px solid #3b82f6' }} />
-      </div>
-      <div style={{ position: 'absolute', bottom: 80, left: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderBottom: '2px solid #00d4ff', borderLeft: '2px solid #00d4ff' }} />
-      </div>
-      <div style={{ position: 'absolute', bottom: 80, right: 40, opacity: 0.3 }}>
-        <div style={{ width: 30, height: 30, borderBottom: '2px solid #00d4ff', borderRight: '2px solid #00d4ff' }} />
-      </div>
+
 
       {/* Main content */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full relative z-10 gap-12 md:gap-20" style={{ maxWidth: 1100 }}>
@@ -147,20 +135,22 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             style={{ marginBottom: 32 }}
           >
             <TypeAnimation
-              sequence={personalInfo.taglines.flatMap((t) => [t, 2000])}
+              sequence={personalInfo.taglines.flatMap((t) => [t, 2500])}
               wrapper="div"
-              speed={50}
+              speed={60}
               repeat={Infinity}
+              cursor={true}
               style={{
                 fontFamily: "'Rajdhani', sans-serif",
                 fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
                 color: 'var(--text-secondary)',
                 letterSpacing: '0.1em',
                 fontWeight: 500,
+                minHeight: '2rem',
               }}
             />
           </motion.div>
