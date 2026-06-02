@@ -42,7 +42,7 @@ const Achievements = () => {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: 72 }}
         >
-          <div className="section-tag">// ACHIEVEMENTS</div>
+          <div className="section-tag">ACHIEVEMENTS</div>
           <h2 className="section-title">Wins & Milestones</h2>
           <div className="section-line" />
         </motion.div>

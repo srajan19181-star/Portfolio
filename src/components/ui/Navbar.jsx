@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 
 /**
  * Navbar — glassmorphism floating navigation bar
@@ -102,7 +103,7 @@ const Navbar = () => {
         {/* Logo */}
         <div
           onClick={() => scrollTo('#hero')}
-          style={{  }}
+          style={{ cursor: 'pointer' }}
           className="interactive"
         >
           <span
@@ -187,7 +188,7 @@ const Navbar = () => {
             }}
             title="Toggle Light/Dark Mode"
           >
-            {theme === 'dark' ? '💡' : '🌙'}
+            {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
 
           {/* Mobile hamburger */}
@@ -202,7 +203,7 @@ const Navbar = () => {
               fontSize: '1.2rem',
             }}
           >
-            {menuOpen ? '✕' : '☰'}
+            {menuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
         </div>
       </div>

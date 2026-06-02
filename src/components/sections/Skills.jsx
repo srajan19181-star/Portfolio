@@ -15,10 +15,10 @@ const categoryColors = {
 
 const categoryIcons = {
   Language: '{ }',
-  Frontend: '◈',
+  Frontend: '</>',
   Backend: '⚙',
-  Database: '◉',
-  Tools: '⌥',
+  Database: '▦',
+  Tools: '◆',
 };
 
 const categories = ['All', 'Language', 'Frontend', 'Backend', 'Database', 'Tools'];
@@ -102,7 +102,7 @@ const Skills = () => {
                 fontFamily: "'Orbitron', monospace",
                 fontSize: '0.65rem',
                 letterSpacing: '0.1em',
-                cursor: '',
+                cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 boxShadow:
                   activeCategory === cat

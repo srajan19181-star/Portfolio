@@ -202,7 +202,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: 72, textAlign: 'center' }}
         >
-          <div className="section-tag" style={{ textAlign: 'center' }}>// JOURNEY</div>
+          <div className="section-tag" style={{ textAlign: 'center' }}>JOURNEY</div>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Education & Milestones</h2>
           <div className="section-line" style={{ margin: '0 auto 0' }} />
         </motion.div>

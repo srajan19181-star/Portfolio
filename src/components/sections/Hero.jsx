@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { personalInfo } from '../../data/portfolioData';
 import gsap from 'gsap';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 /**
  * Hero Section — cinematic first impression
@@ -100,7 +101,6 @@ const Hero = () => {
               gap: 12,
             }}
           >
-            
             <span
               style={{
                 display: 'inline-block',
@@ -112,6 +112,7 @@ const Hero = () => {
                 animation: 'pulse-neon 2s infinite',
               }}
             />
+            AVAILABLE FOR WORK
           </motion.div>
 
           {/* Name — cinematic entrance */}
@@ -221,9 +222,9 @@ const Hero = () => {
             className="justify-center md:justify-start"
           >
             {[
-              { label: 'GitHub', url: personalInfo.github, icon: '⌥' },
-              { label: 'LinkedIn', url: personalInfo.linkedin, icon: '◈' },
-              { label: 'Email', url: `mailto:${personalInfo.email}`, icon: '◉' },
+              { label: 'GitHub', url: personalInfo.github, Icon: FiGithub },
+              { label: 'LinkedIn', url: personalInfo.linkedin, Icon: FiLinkedin },
+              { label: 'Email', url: `mailto:${personalInfo.email}`, Icon: FiMail },
             ].map((social) => (
               <a
                 key={social.label}
@@ -245,7 +246,7 @@ const Hero = () => {
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#3b82f6')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
               >
-                <span style={{ fontSize: '1rem' }}>{social.icon}</span>
+                <social.Icon size={16} />
                 {social.label}
               </a>
             ))}
@@ -326,9 +327,9 @@ const Hero = () => {
       >
         <span
           className="font-mono"
-          style={{ color: '#2d4a35', fontSize: '0.6rem', letterSpacing: '0.3em' }}
+          style={{ color: 'var(--text-muted)', fontSize: '0.6rem', letterSpacing: '0.3em' }}
         >
-          
+          SCROLL
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

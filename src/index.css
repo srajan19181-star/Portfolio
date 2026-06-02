@@ -17,9 +17,10 @@
 
   /* Accents */
   --neon-cyan: #3b82f6; /* Blue */
-  --neon-green: #0ea5e9; /* Sky Blue */
-  --neon-light-green: #000000; /* Dark for accents */
-  --neon-purple: #1e40af;
+  --neon-sky: #0ea5e9; /* Sky Blue */
+  --neon-green: #0ea5e9;
+  --neon-light-green: #1e40af; /* Dark blue for accents */
+  --neon-purple: #7c3aed;
   --neon-pink: #0f172a;
   
   --font-display: 'Orbitron', monospace;
@@ -41,10 +42,11 @@
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
 
-  --neon-cyan: #3b82f6; 
-  --neon-green: #00d4ff; 
-  --neon-light-green: #ffffff; 
-  --neon-purple: #312e81;
+  --neon-cyan: #3b82f6;
+  --neon-sky: #00d4ff;
+  --neon-green: #00d4ff;
+  --neon-light-green: #ffffff;
+  --neon-purple: #7c3aed;
   --neon-pink: #ffffff;
 }
 
@@ -255,6 +257,17 @@ body {
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-green), transparent);
   margin-bottom: 24px;
   box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* ===== CARD HINT ===== */
+.card-hint {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+*:hover > .card-hint,
+.interactive:hover .card-hint {
+  opacity: 1;
 }
 
 /* ===== CANVAS CONTAINER ===== */

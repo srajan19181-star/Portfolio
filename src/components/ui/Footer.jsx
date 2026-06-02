@@ -1,5 +1,6 @@
 import { personalInfo } from '../../data/portfolioData';
 import { motion } from 'framer-motion';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 /**
  * Footer — minimal cyberpunk footer
@@ -48,9 +49,9 @@ const Footer = () => {
 
         <div style={{ display: 'flex', gap: 20 }}>
           {[
-            { label: 'GH', url: personalInfo.github },
-            { label: 'LI', url: personalInfo.linkedin },
-            { label: 'ML', url: `mailto:${personalInfo.email}` },
+            { label: 'GitHub', Icon: FiGithub, url: personalInfo.github },
+            { label: 'LinkedIn', Icon: FiLinkedin, url: personalInfo.linkedin },
+            { label: 'Email', Icon: FiMail, url: `mailto:${personalInfo.email}` },
           ].map((link) => (
             <a
               key={link.label}
@@ -65,10 +66,14 @@ const Footer = () => {
                 textDecoration: 'none',
                 transition: 'color 0.3s',
                 letterSpacing: '0.1em',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#3b82f6')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#334155')}
             >
+              <link.Icon size={14} />
               {link.label}
             </a>
           ))}

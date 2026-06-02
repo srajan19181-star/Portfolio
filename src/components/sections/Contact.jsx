@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalInfo } from '../../data/portfolioData';
+import { FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
 
 /**
  * Contact Section — futuristic terminal-style contact form with real email sending via Formspree
@@ -67,10 +68,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { label: 'GitHub', url: personalInfo.github, color: 'var(--text-secondary)', icon: '⌥', desc: '@srajan19181-star' },
-    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#3b82f6', icon: '◈', desc: 'srajan-umrao' },
-    { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#00d4ff', icon: '◉', desc: personalInfo.email },
-    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: 'var(--text-primary)', icon: '◎', desc: personalInfo.phone },
+    { label: 'GitHub', url: personalInfo.github, color: 'var(--text-secondary)', Icon: FiGithub, desc: '@srajan19181-star' },
+    { label: 'LinkedIn', url: personalInfo.linkedin, color: '#3b82f6', Icon: FiLinkedin, desc: 'srajan-umrao' },
+    { label: 'Email', url: `mailto:${personalInfo.email}`, color: '#00d4ff', Icon: FiMail, desc: personalInfo.email },
+    { label: 'Phone', url: `tel:${personalInfo.phone}`, color: 'var(--text-primary)', Icon: FiPhone, desc: personalInfo.phone },
   ];
 
   return (
@@ -103,7 +104,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           style={{ marginBottom: 72, textAlign: 'center' }}
         >
-          <div className="section-tag" style={{ textAlign: 'center' }}>// CONTACT</div>
+          <div className="section-tag" style={{ textAlign: 'center' }}>CONTACT</div>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Let's Connect</h2>
           <div className="section-line" style={{ margin: '0 auto' }} />
           <p
@@ -337,7 +338,7 @@ const Contact = () => {
               className="font-mono"
               style={{ color: 'var(--text-muted)', fontSize: '0.65rem', letterSpacing: '0.3em', marginBottom: 8 }}
             >
-              // DIRECT CHANNELS
+              DIRECT CHANNELS
             </div>
 
             {socialLinks.map((social, i) => (
@@ -370,12 +371,12 @@ const Contact = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '1.2rem',
+                    fontSize: '1.1rem',
                     color: social.color,
                     flexShrink: 0,
                   }}
                 >
-                  {social.icon}
+                  <social.Icon size={20} />
                 </div>
                 <div>
                   <div

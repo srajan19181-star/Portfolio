@@ -100,7 +100,7 @@ const About = () => {
                 className="font-mono"
                 style={{ color: '#00d4ff', fontSize: '0.65rem', marginBottom: 16, letterSpacing: '0.3em' }}
               >
-                // IDENTITY.JSON
+                PROFILE.JSON
               </div>
 
               <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 2 }}>
@@ -208,7 +208,7 @@ const About = () => {
                 className="font-mono"
                 style={{ color: '#3b82f6', fontSize: '0.65rem', marginBottom: 20, letterSpacing: '0.3em' }}
               >
-                // INTERESTS & FOCUS AREAS
+                INTERESTS & FOCUS AREAS
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                 {interests.map((item, i) => (
@@ -257,7 +257,7 @@ const About = () => {
                 className="font-mono"
                 style={{ color: '#00d4ff', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.3em' }}
               >
-                // EDUCATION
+                EDUCATION
               </div>
               <div style={{ fontFamily: "'Rajdhani', sans-serif" }}>
                 <div style={{ color: '#e8f5e9', fontWeight: 600, fontSize: '1rem' }}>

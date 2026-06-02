@@ -47,7 +47,7 @@ const ProjectCard = ({ project, onClick, index, isInView }) => {
         border: `1px solid ${color}25`,
         borderRadius: 16,
         padding: 28,
-        cursor: '',
+        cursor: 'pointer',
         transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
         transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
         backdropFilter: 'blur(16px)',
@@ -406,7 +406,7 @@ const ProjectModal = ({ project, onClose }) => {
             className="font-mono"
             style={{ color: 'var(--text-muted)', fontSize: '0.65rem', marginBottom: 12, letterSpacing: '0.2em' }}
           >
-            // TECH STACK
+            TECH STACK
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {project.tech.map((tech) => (
@@ -484,7 +484,7 @@ const Projects = () => {
             transition={{ duration: 0.6 }}
             style={{ marginBottom: 48 }}
           >
-            <div className="section-tag">// PROJECTS</div>
+            <div className="section-tag">PROJECTS</div>
             <h2 className="section-title">What I've Built</h2>
             <div className="section-line" />
           </motion.div>
